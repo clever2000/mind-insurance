@@ -9,7 +9,7 @@
 angular.module('mindInsuranceApp')
   .directive('activityTile', function () {
     return {
-      templateUrl: 'views/activity-tile.html',
+      templateUrl: 'views/directives/activity-tile.html',
       restrict: 'E',
       scope: {
         step: '='

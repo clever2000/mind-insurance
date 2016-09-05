@@ -2,7 +2,9 @@
 @import './happinessLab.scss';
 @import './profile.scss';
 @import './upgrade.scss';
-@import './header.scss';
-@import './tabbar.scss';
-@import './activity-indicator.scss';
-@import './activity-tile.scss';
+@import './directives/header.scss';
+@import './directives/tabbar.scss';
+@import './directives/activity-indicator.scss';
+@import './directives/activity-tile.scss';
+
+@import './modals/whats-this.scss';

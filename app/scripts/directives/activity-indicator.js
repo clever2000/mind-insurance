@@ -7,18 +7,38 @@
  * # activityIndicator
  */
 angular.module('mindInsuranceApp')
-  .directive('activityIndicator', function () {
+  .directive('activityIndicator', function ($uibModal) {
     return {
-      templateUrl: 'views/activity-indicator.html',
+      templateUrl: 'views/directives/activity-indicator.html',
       restrict: 'E',
-      scope: {
+      scope: {},
+      bindToController: {
+
       },
-      link: function (scope, element, attrs) {
+      controller: function () {
+        var vm = this;
         var step = 1  // This should be pulled from service
-        Object.assign(scope, {
+        Object.assign(vm, {
           step: step,
           stepTitle: 'Values Assessment',
         });
-      }
+
+        vm.openWhatsThis = function () {
+          var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modals/whats-this.html',
+            controller: 'ModalWhatsThisCtrl',
+            controllerAs: 'modalVm',
+            windowClass: 'pattern-background'
+          });
+
+          modalInstance.result.then(function (status) {
+            console.log (status + ' returned');
+          }, function () {
+            console.log ('modal dismissed');
+          });
+        }
+      },
+      controllerAs: 'vm'
     };
   });

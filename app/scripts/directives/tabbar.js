@@ -9,7 +9,7 @@
 angular.module('mindInsuranceApp')
   .directive('tabbar', function () {
     return {
-      templateUrl: 'views/tabbar.html',
+      templateUrl: 'views/directives/tabbar.html',
       restrict: 'E',
       scope: {
         viewport: '@'

@@ -9,7 +9,7 @@
 angular.module('mindInsuranceApp')
   .directive('header', function () {
     return {
-      templateUrl: 'views/header.html',
+      templateUrl: 'views/directives/header.html',
       restrict: 'E',
       scope: {
         avatarUrl: '@',
@@ -17,7 +17,7 @@ angular.module('mindInsuranceApp')
         tabLabel: '@'
       },
       link: function (scope, element, attrs) {
-        
+
       }
     };
   });
