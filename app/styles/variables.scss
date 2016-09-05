@@ -1,0 +1,27 @@
+$mobileBaseSize: 14px;
+$tabletBaseSize: 18px;
+$desktopBaseSize: 24px;
+
+$padding: 1rem;
+
+$red: rgb(243, 84, 102);
+$green: rgb(100,191, 180);
+$pink: rgb(214, 103, 205);
+$violet: rgb(101, 99, 164);
+$brown: rgb(92, 69, 46);
+$dark-blue: rgb(6, 35, 69);
+$gray: rgb(242,236,226);
+$dark-yellow: rgb(255, 126, 103);
+
+@mixin v-align-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin h-align-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

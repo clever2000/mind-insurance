@@ -1,0 +1,106 @@
+@import './variables.scss';
+
+@font-face {
+  font-family: "Libel Suit";
+  src: url(../assets/fonts/libel-suit-rg.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Libel Suit";
+  src: url(../assets/fonts/libel-suit-bk.otf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Libel Suit";
+  src: url(../assets/fonts/libel-suit-lt.otf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Libel Suit";
+  src: url(../assets/fonts/libel-suit-el.otf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Libel Suit";
+  src: url(../assets/fonts/libel-suit-sb.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Libel Suit";
+  src: url(../assets/fonts/libel-suit-bd.otf);
+  font-weight: 900;
+}
+
+/* Customize animate.css duration */
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+/* Customize Bootstrap */
+.modal-dialog {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-content {
+  height: 100%;
+  background-color: transparent;
+}
+
+/* Styles */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: "Libel Suit";
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+button {
+  background-color: transparent !important;
+}
+
+.h-align-container {
+  @include h-align-container;
+}
+.v-align-container {
+  @include v-align-container;
+}
+.display-flex {
+  display: flex;
+}
+
+.pattern-background {
+  background-image: url(../assets/images/background.jpg);
+  background-position: center;
+  background-repeat: repeat;
+}
+.gray-border {
+  border: $gray 1px solid;
+}
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+
+@media only screen and (max-width: 414px) {
+  html {
+    font-size: $mobileBaseSize;
+  }
+}
+@media only screen and (min-width: 415px) {
+  html {
+    font-size: $tabletBaseSize;
+  }
+}
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: $desktopBaseSize;
+  }
+}

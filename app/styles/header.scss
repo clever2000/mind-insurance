@@ -1,0 +1,83 @@
+@import './variables.scss';
+
+.header {
+  padding: $padding;
+  color: $green;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  .left-box {
+    display: flex;
+    align-items: center;
+  }
+  #avatar {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: $green 3px solid;
+  }
+
+  .welcome-label {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+  .name-label {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .right-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .swb-score {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-right: 10px;
+    .circle {
+      width: 2.5rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-radius: 50%;
+      border: $green 5px solid;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      box-sizing: content-box;
+      font-weight: bold;
+    }
+  }
+  .subscription-level {
+    font-size: 0.9rem;
+    text-align: center;
+    .circle {
+      width: 2.5rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-radius: 50%;
+      border: $red 5px solid;
+      background-color: $red;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      box-sizing: content-box;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .swb-score-label,
+  .subscription-level-label {
+    font-size: 0.8rem;
+    font-weight: 200;
+    padding: 3px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .left-box {
+    margin-left: 20px;
+  }
+}
