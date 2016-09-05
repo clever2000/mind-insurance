@@ -9,5 +9,6 @@
  */
 angular.module('mindInsuranceApp')
   .controller('HappinessLabCtrl', function () {
-
+    var vm = this;
+    vm.step = 1;
   });
