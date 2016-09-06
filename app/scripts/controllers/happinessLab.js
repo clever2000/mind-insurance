@@ -11,4 +11,9 @@ angular.module('mindInsuranceApp')
   .controller('HappinessLabCtrl', function () {
     var vm = this;
     vm.step = 1;
+    vm.activityTiles = [];
+
+    for (var i = 0; i < 4; i++) {
+      vm.activityTiles.push({step: i})
+    }
   });

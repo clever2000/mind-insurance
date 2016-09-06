@@ -11,6 +11,7 @@ angular.module('mindInsuranceApp')
     return {
       templateUrl: 'views/directives/header.html',
       restrict: 'E',
+      replace: true,
       scope: {
         avatarUrl: '@',
         name: '@',

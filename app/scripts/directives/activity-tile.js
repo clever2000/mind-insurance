@@ -11,6 +11,7 @@ angular.module('mindInsuranceApp')
     return {
       templateUrl: 'views/directives/activity-tile.html',
       restrict: 'E',
+      replace: true,
       scope: {
         step: '='
       },
