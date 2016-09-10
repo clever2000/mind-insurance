@@ -2,6 +2,16 @@
   <a ui-sref="{{uiStates[i]}}" ng-repeat="i in [0,1,2]" ui-sref-active="active-tab">
     <div class="tab gray-border" ng-class="classNames[i]">
       <div class="tab-image" />
+      <!-- <picture>
+
+      <source media="(max-width: 400px)" srcset="/assets/images/my_happiness_lab.png">
+
+      <source media="(max-width: 800px)" srcset="/assets/images/my_profile.png">
+
+      <img src="/assets/images/upgrade.png" alt="Space Needle">
+
+      </picture> -->
+
       <div class="tab-label">{{tabLabels[i]}}</div>
     </div>
   </a>

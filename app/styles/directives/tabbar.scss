@@ -4,9 +4,11 @@
   width: 100%;
   padding: 1rem 0;
   background-color: transparent;
+  color: $brown;
 }
 .active-tab .tab {
   background-color: $green;
+  color: $dark-blue;
 }
 .happiness-lab .tab-image {
   background-image: url("/assets/images/my_happiness_lab.png");
@@ -14,8 +16,19 @@
 .profile .tab-image {
   background-image: url("/assets/images/my_profile.png");
 }
-.upgrade > .tab-image {
+.upgrade .tab-image {
   background-image: url("/assets/images/upgrade.png");
+}
+.active-tab {
+  .happiness-lab .tab-image {
+    background-image: url("/assets/images/my_happiness_lab_active.png");
+  }
+  .profile .tab-image {
+    background-image: url("/assets/images/my_profile_active.png");
+  }
+  .upgrade .tab-image {
+    background-image: url("/assets/images/upgrade_active.png");
+  }
 }
 .tab-image {
   background-position: center;
