@@ -9,6 +9,9 @@
     position: relative;
     padding: 0.7*$padding $padding;
     background-color: $green;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .count-box-wrapper {
     display: flex;

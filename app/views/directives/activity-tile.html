@@ -1,7 +1,7 @@
 <div class="activity-tile">
-  <div class="content-tile">
+  <div class="content-tile" ng-style="{'background-image':'url('+vm.bgImageUrl+')'}">
     <div class="count-box-wrapper">
-      <span class="count-box">{{vm.count}}</span>
+      <span ng-class="{'invisible':!vm.count}" class="count-box">{{vm.count}}</span>
     </div>
     <div class="description-tile">{{vm.stepTitle}}</div>
     <button class="button-custom">{{vm.buttonLabel}}</button>
