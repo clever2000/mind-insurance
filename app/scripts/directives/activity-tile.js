@@ -12,15 +12,18 @@ angular.module('mindInsuranceApp')
       templateUrl: 'views/directives/activity-tile.html',
       restrict: 'E',
       replace: true,
-      scope: {
+      bindToController: {
         step: '='
       },
-      link: function (scope, element, attrs) {
-        Object.assign(scope, {
+      controller: function() {
+        var vm = this;
+
+        Object.assign(vm, {
           count: 8,
           stepTitle: 'My Daily Mindfulness',
           buttonLabel: 'View All'
         })
-      }
+      },
+      controllerAs: 'vm'
     };
   });
