@@ -12,17 +12,17 @@ angular.module('mindInsuranceApp')
       templateUrl: 'views/directives/activity-tile.html',
       restrict: 'E',
       replace: true,
+      scope: {},
       bindToController: {
         step: '='
       },
       controller: function() {
         var vm = this;
-
         switch (vm.step) {
           case 1:
             Object.assign(vm, {
               count: 12,
-              stepTitle: 'My Daily Mindfulness',
+              stepTitle: 'My Daily Mindfulness Practice',
               buttonLabel: 'View All'
             })
             break;
@@ -48,6 +48,11 @@ angular.module('mindInsuranceApp')
             })
             break;
           default:
+            Object.assign(vm, {
+              count: 12,
+              stepTitle: 'My Daily Mindfulness',
+              buttonLabel: 'View All'
+            })
             break;
         }
 

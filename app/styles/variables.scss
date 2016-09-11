@@ -1,6 +1,8 @@
 $mobileBaseSize: 14px;
 $tabletBaseSize: 18px;
-$desktopBaseSize: 24px;
+$desktopBaseSize: 20px;
+$mobileVW: 415px;
+$tabletVW: 768px;
 
 $padding: 1rem;
 
@@ -12,6 +14,7 @@ $brown: rgb(92, 69, 46);
 $dark-blue: rgb(6, 35, 69);
 $gray: rgb(242,236,226);
 $dark-yellow: rgb(255, 126, 103);
+$blue: rgb(41, 128, 185);
 
 @mixin v-align-container {
   display: flex;

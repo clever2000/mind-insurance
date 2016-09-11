@@ -7,9 +7,9 @@
  * # upgrade
  */
 angular.module('mindInsuranceApp')
-  .directive('upgrade', function ($uibModal) {
+  .directive('upgradeBanner', function ($uibModal) {
     return {
-      templateUrl: 'views/directives/upgrade.html',
+      templateUrl: 'views/directives/upgrade-banner.html',
       restrict: 'E',
       replace: true,
       scope: {},
@@ -18,7 +18,7 @@ angular.module('mindInsuranceApp')
       },
       controller: function () {
         var vm = this;
-
+        
       },
       controllerAs: 'vm'
     };

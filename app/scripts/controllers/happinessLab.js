@@ -15,5 +15,5 @@ angular.module('mindInsuranceApp')
 
     for (var i = 1; i <= 4; i++) {
       vm.activityTiles.push({step: i})
-    }
+    }    
   });

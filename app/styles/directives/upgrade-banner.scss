@@ -1,0 +1,73 @@
+@import '../variables.scss';
+
+.upgrade-banner {
+  padding: 0.5*$padding;
+
+  .upgrade-content {
+    padding: 0.7*$padding;
+    background-color: $gray;
+  }
+
+  .bordered {
+    border: 1px solid $blue;
+    padding: 0.7*$padding;
+  }
+  .first-line {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  .second-line {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  .button-wrapper {
+    display: flex;
+    button {
+      flex: 1;
+      border: 1px solid black;
+      text-align: center;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 200;
+      box-sizing: content-box;
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobileVW) {
+  .upgrade-banner {
+    .bordered {
+      padding: 2.5*$padding 0.7*$padding
+    }
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      .button-wrapper {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tabletVW) {
+  .upgrade-banner {
+    height: 13rem;
+    .upgrade-content {
+      height: 100%;
+    }
+    .bordered {
+      height: 100%;
+      position: relative;
+    }
+    .wrapper .button-wrapper {
+      width: 75%;
+      max-width: 1000px;
+      position: absolute;
+      bottom: 0.7*$padding;
+    }
+  }
+}
