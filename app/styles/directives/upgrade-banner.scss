@@ -13,15 +13,16 @@
     padding: 0.7*$padding;
   }
   .first-line {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 100;
   }
   .second-line {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 500;
   }
   .button-wrapper {
     display: flex;
+    margin-top: 5px;
     button {
       flex: 1;
       border: 1px solid black;
@@ -38,7 +39,7 @@
   }
 }
 
-@media only screen and (min-width: $mobileVW) {
+@media only screen and (min-width: $tabletVW) {
   .upgrade-banner {
     .bordered {
       padding: 2.5*$padding 0.7*$padding
@@ -47,13 +48,13 @@
       display: flex;
       justify-content: space-between;
       .button-wrapper {
-        width: 30%;
+        width: 45%;
       }
     }
   }
 }
 
-@media only screen and (min-width: $tabletVW) {
+@media only screen and (min-width: $desktopVW) {
   .upgrade-banner {
     height: 13rem;
     .upgrade-content {
