@@ -34,11 +34,12 @@
   .right-box {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
   .swb-score {
     font-size: 1.3rem;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 20px;
     .circle {
       width: 2.5rem;
       height: 2.5rem;
@@ -54,6 +55,7 @@
   .subscription-level {
     font-size: 0.9rem;
     text-align: center;
+    margin-right: 20px;
     .circle {
       width: 2.5rem;
       height: 2.5rem;
@@ -73,6 +75,16 @@
     font-size: 0.8rem;
     font-weight: 200;
     padding: 3px;
+  }
+  .btn-logout {
+    width: 80px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: $brown;
+    border: $brown 1px solid;
+    transform: translateY(-5px);
   }
 }
 
