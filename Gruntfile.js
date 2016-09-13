@@ -520,7 +520,8 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('heroku:production', [
-    'build'
-  ]);
+  // temporarily use dist in git
+  // grunt.registerTask('heroku:production', [
+  //   'build'
+  // ]);
 };
