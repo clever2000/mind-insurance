@@ -514,12 +514,7 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('heroku', [
-    'clean:server',
-    'wiredep',
-    'concurrent:server',
-    'postcss:server',
-    'connect:livereload',
-    'watch'
+  grunt.registerTask('heroku:production', [
+    'build'
   ]);
 };
