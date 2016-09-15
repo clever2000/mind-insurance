@@ -77,3 +77,36 @@
     margin-bottom: 0.5rem;
   }
 }
+
+/*
+#hexagon {
+  margin-left: 50px;
+  margin-top: 50px;
+	width: 35px;
+	height: 60px;
+	background: red;
+	position: relative;
+}
+#hexagon:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -15px;
+	width: 0;
+	height: 0;
+	border-bottom: 30px solid transparent;
+	border-right: 15px solid red;
+	border-top: 30px solid transparent;
+}
+#hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	width: 0;
+	height: 0;
+  border-left: 15px solid red;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+}
+*/
