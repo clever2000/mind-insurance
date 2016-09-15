@@ -120,13 +120,24 @@ button {
   }
   .bottom-area {
     flex: 1;
-    overflow-y: auto;
+    overflow: hidden;
+    position: relative;
+    
     .tab-bar-area {
-      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+      position: absolute;
       width: 10rem;
+
+      &::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+      }
     }
     .content-area {
       margin-left: 10rem;
+      overflow-y: auto;
+      height: 100%;
     }
   }
 }
