@@ -29,14 +29,30 @@ angular.module('mindInsuranceApp')
             animation: true,
             templateUrl: 'views/modals/whats-this.html',
             controller: 'ModalWhatsThisCtrl',
-            controllerAs: 'modalVm',
-            windowClass: 'pattern-background'
+            controllerAs: '$ctrl',
+            windowClass: 'modal-background',
+            resolve: {
+              step: step
+            }
           });
 
           modalInstance.result.then(function (status) {
             console.log (status + ' returned');
           }, function () {
             console.log ('modal dismissed');
+          });
+        }
+
+        vm.openAssessment = function () {
+          $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modals/assessment.html',
+            controller: 'ModalAssessmentCtrl',
+            controllerAs: '$ctrl',
+            windowClass: 'modal-background',
+            resolve: {
+              step: step
+            }
           });
         }
       },

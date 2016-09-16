@@ -47,6 +47,10 @@
   height: 100%;
   background-color: transparent;
 }
+.btn {
+  border: solid 1px $dark-blue;
+  color: $dark-blue;
+}
 
 /* Styles */
 
@@ -85,6 +89,9 @@ button {
   background-image: url(../assets/images/background.jpg);
   background-position: center;
   background-repeat: repeat;
+}
+.modal-background {
+  background-color: $modal-bgcolor;
 }
 .gray-border {
   border: $gray 1px solid;
