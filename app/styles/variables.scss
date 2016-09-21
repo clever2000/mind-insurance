@@ -29,3 +29,6 @@ $modal-bgcolor: rgb(219, 214, 205);
   justify-content: center;
   align-items: center;
 }
+@mixin normal-font {
+  font-family: 'helvetica';
+}

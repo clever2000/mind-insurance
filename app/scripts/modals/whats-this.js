@@ -10,14 +10,15 @@
 angular.module('mindInsuranceApp')
   .controller('ModalWhatsThisCtrl', function ($uibModal, $uibModalInstance, step) {
     var $ctrl = this;
-    $ctrl.step = 1;
+    $ctrl.step = step;
+    $ctrl.beginLabel = "Let's Begin";
 
     switch (step) {
       case 1:
         Object.assign($ctrl, {
           title1: 'What is',
           title2: 'Values Assessment?',
-          description: 'The Values Assessment, is a tool to help you gain insight into your current avlues hierarchy and the motivations behind your values. \
+          direction: 'The Values Assessment, is a tool to help you gain insight into your current avlues hierarchy and the motivations behind your values. \
             It will also help you to identify, understand and respond to the impact of both congruence and conflict among your values.',
         });
         break;
@@ -25,14 +26,14 @@ angular.module('mindInsuranceApp')
         Object.assign($ctrl, {
           title1: 'What is',
           title2: 'Goal Insights And Actions?',
-          description: 'The Goals Insight and Actions is ',
+          direction: 'The Goals Insight and Actions is ',
         });
         break;
       case 4:
         Object.assign($ctrl, {
           title1: 'What is',
           title2: 'Values Insights And Actions?',
-          description: 'The Values Insight and Actions is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei- is a tool to help you gain insight into your current avlues hierarchy and the motivations behind your values. \
+          direction: 'The Values Insight and Actions is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei- is a tool to help you gain insight into your current avlues hierarchy and the motivations behind your values. \
             It will also help you to identify, understand and respond to the impact of both congruence and conflict among your values.',
         });
         break;

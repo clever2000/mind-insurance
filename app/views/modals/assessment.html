@@ -1,6 +1,14 @@
-<div ng-if="$ctrl.intro">
-  {{$ctrl.title}}
-</div>
-<div ng-if="!$ctrl.intro">
-  {{$ctrl.step}}
+<div class="assessment">
+  <div class="close-box">
+    <button class="btn btn-close" type="button" ng-click="$ctrl.close()">&times;</button>
+  </div>
+  <div ng-if="$ctrl.intro" ng-include="'views/partials/intro.html'">
+  </div>
+  <div ng-if="!$ctrl.intro">
+    <div class="question-indicator-box">
+      <div class="question-indicator" ng-class="{'scroll': $ctrl.step===1, 'non-scroll': $ctrl.step===2}">
+        <hexagon ng-repeat="question in $ctrl.questions track by $index" ng-model="$ctrl.selectedAnswer" ng-value="$index+1" />
+      </div>
+    </div>
+  </div>
 </div>

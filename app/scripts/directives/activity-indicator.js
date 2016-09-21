@@ -37,9 +37,9 @@ angular.module('mindInsuranceApp')
           });
 
           modalInstance.result.then(function (status) {
-            console.log (status + ' returned');
+
           }, function () {
-            console.log ('modal dismissed');
+
           });
         }
 

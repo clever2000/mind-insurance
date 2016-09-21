@@ -4,6 +4,9 @@
       <span ng-class="{'invisible':!vm.count}" class="count-box">{{vm.count}}</span>
     </div>
     <div class="description-tile">{{vm.stepTitle}}</div>
-    <button class="button-custom">{{vm.buttonLabel}}</button>
+    <div class="button-container">
+      <button class="button1" ng-click="vm.button1.onClick()">{{vm.button1.label}}</button>
+      <button class="button2" ng-class="{'invisible': !vm.button2}" ng-click="vm.button2.onClick()">{{vm.button2.label}}</button>
+    </div>
   </div>
 </div>

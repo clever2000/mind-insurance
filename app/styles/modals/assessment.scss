@@ -1,1 +1,51 @@
 @import '../variables.scss';
+
+.question-indicator {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .hexagon-label {
+    font-size: 35px;        // important: overwrites .hexagon-label in hexagon.css
+    margin-left: -8px;
+    margin-bottom: 2px;      // overwrites bootstrap form
+
+    &:nth-child(3n+1) {
+      margin-top: 18px;
+    }
+    &:nth-child(3n+2) {
+
+    }
+    &:nth-child(3n+3) {
+
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .question-indicator-box {
+    padding: 0 10px;
+
+    .question-indicator.scroll {
+      overflow-x: auto;
+      align-content: initial;
+      padding-left: 10px;
+    }
+    .question-indicator.non-scroll {
+      align-content: center;
+    }
+  }
+}
+
+@media only screen and (min-width: $tabletVW) {
+  .question-indicator {
+    align-content: flex-end;
+  }
+}
+@media only screen and (min-width: $desktopVW) {
+  .question-indicator {
+    width: 100%;
+    align-content: center;
+  }
+}

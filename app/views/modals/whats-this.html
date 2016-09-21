@@ -1,10 +1,6 @@
-<div class="modal-header">
-  <h3 class="modal-title" id="modal-title">{{$ctrl.title1}} {{$ctrl.title2}}</h3>
-</div>
-<div class="modal-body" id="modal-body">
-  <div class="description">
-    {{$ctrl.description}}
+<div class="whats-this">
+  <div class="close-box">
+    <button class="btn btn-close" type="button" ng-click="$ctrl.close()">&times;</button>
   </div>
-  <button class="btn" type="button" ng-click="$ctrl.begin()">Let's Begin</button>
-  <button class="btn" type="button" ng-click="$ctrl.close()">Close</button>
+  <div ng-include="'views/partials/intro.html'"></div>
 </div>

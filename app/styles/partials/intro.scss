@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+._intro {
+  padding: 15px 0;
+  @include v-align-container;
+
+  .title1 {
+    color: $brown;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .title2 {
+    color: $dark-blue;
+    font-size: 2rem;
+  }
+  .direction {
+    margin-top: 10px;
+    width: 85%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: $dark-blue;
+    @include normal-font;
+  }
+  .btn-begin {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    padding: 0.6rem 2rem;
+    border-width: 2px;
+  }
+}
