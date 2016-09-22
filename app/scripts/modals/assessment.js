@@ -26,7 +26,7 @@ angular.module('mindInsuranceApp')
           responseSelectors: ['Not at all like me', 'Not much like me', 'A little like me', 'Somewhat like me', 'Like me', 'Very much like me']
         });
         for (var i = 0; i < $ctrl.nQuestions; i++) {
-          $ctrl.questions.push('Thinking up new ideas and being creative is important to me. I like to do things in my own original way.');
+          $ctrl.questions.push('Thinking up new ideas and being creative is important to me.\n I like to do things in my own original way.');
           $ctrl.responses.push(0);
         }
 

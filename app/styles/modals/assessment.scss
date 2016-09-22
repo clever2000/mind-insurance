@@ -9,11 +9,13 @@
   }
   .direction {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $dark-blue;
     @include normal-font;
   }
-
+  .divider {
+    margin: 15px 0;
+  }
   .question-indicator {
     height: 80px;
     display: flex;
@@ -36,9 +38,18 @@
       }
     }
   }
+  .question-index {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+  .question {
+    font-size: 24px;
+    color: $dark-blue;
+    white-space: pre-line;
+  }
 
   @media only screen and (max-width: 767px) {
-    .title, .direction {
+    .title, .direction, .divider {
       display: none;
     }
 
@@ -52,27 +63,49 @@
         align-content: center;
       }
     }
+    .question {
+      font-size: 20px;
+    }
   }
 
-  @media only screen and (min-width: $tabletVW) {
+  @media only screen and (min-width: $tabletVW) and (max-width: 991px){
     .title, .direction {
       text-align: left;
     }
     .direction {
       width: 90%;
     }
+    .question-indicator-box {
+      float: right;
+    }
     .question-indicator {
       align-content: flex-end;
     }
+    .question-index {
+      margin-top: 40px;
+      font-size: 2.2rem;
+    }
+    .question {
+      width: 60%;
+    }
   }
   @media only screen and (min-width: $desktopVW) {
-    .title, .direction {
+    padding: 2*$padding 7*$padding;
+
+    .content-wrapper {
+      width: 90%;
+      margin-left: 5%;
+    }
+    .title, .direction, .question-index, .question {
       text-align: center;
+      width: 100%;
     }
     .question-indicator {
       width: 100%;
       align-content: center;
     }
+    .question-index {
+      font-size: 1.8rem;
+    }
   }
-
 }
