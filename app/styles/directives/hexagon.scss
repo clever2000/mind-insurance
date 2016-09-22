@@ -3,14 +3,14 @@
 .hexagon-label {
   font-size: 50px;
 
-  input[type="radio"] {
+  input {
     display: none;
   }
-  input[type="radio"] + .hexagon {
+  input + .hexagon {
     background-color: white;
     color: $brown;
   }
-  input[type="radio"]:checked + .hexagon {
+  input:checked + .hexagon {
     background-color: $brown;
     color: white;
   }

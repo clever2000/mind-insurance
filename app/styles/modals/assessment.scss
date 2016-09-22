@@ -1,51 +1,78 @@
 @import '../variables.scss';
 
-.question-indicator {
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.assessment-modal {
+  padding: $padding;
 
-  .hexagon-label {
-    font-size: 35px;        // important: overwrites .hexagon-label in hexagon.css
-    margin-left: -8px;
-    margin-bottom: 2px;      // overwrites bootstrap form
+  .title {
+    color: $dark-blue;
+    font-size: 2.5rem;
+  }
+  .direction {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: $dark-blue;
+    @include normal-font;
+  }
 
-    &:nth-child(3n+1) {
-      margin-top: 18px;
-    }
-    &:nth-child(3n+2) {
+  .question-indicator {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-    }
-    &:nth-child(3n+3) {
+    .hexagon-label {
+      font-size: 35px;        // important: overwrites .hexagon-label in hexagon.css
+      margin-left: -8px;
+      margin-bottom: 2px;      // overwrites bootstrap form
 
+      &:nth-child(3n+1) {
+        margin-top: 18px;
+      }
+      &:nth-child(3n+2) {
+
+      }
+      &:nth-child(3n+3) {
+
+      }
     }
   }
-}
 
-@media only screen and (max-width: 767px) {
-  .question-indicator-box {
-    padding: 0 10px;
-
-    .question-indicator.scroll {
-      overflow-x: auto;
-      align-content: initial;
-      padding-left: 10px;
+  @media only screen and (max-width: 767px) {
+    .title, .direction {
+      display: none;
     }
-    .question-indicator.non-scroll {
+
+    .question-indicator-box {
+      .question-indicator.scroll {
+        overflow-x: auto;
+        align-content: initial;
+        padding-left: 10px;
+      }
+      .question-indicator.non-scroll {
+        align-content: center;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $tabletVW) {
+    .title, .direction {
+      text-align: left;
+    }
+    .direction {
+      width: 90%;
+    }
+    .question-indicator {
+      align-content: flex-end;
+    }
+  }
+  @media only screen and (min-width: $desktopVW) {
+    .title, .direction {
+      text-align: center;
+    }
+    .question-indicator {
+      width: 100%;
       align-content: center;
     }
   }
-}
 
-@media only screen and (min-width: $tabletVW) {
-  .question-indicator {
-    align-content: flex-end;
-  }
-}
-@media only screen and (min-width: $desktopVW) {
-  .question-indicator {
-    width: 100%;
-    align-content: center;
-  }
 }

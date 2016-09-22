@@ -10,12 +10,9 @@
 angular.module('mindInsuranceApp')
   .service('detectDevice', function () {
     // AngularJS will instantiate a singleton by calling "new" on this function
-
-    var device = {isPhone: false};
-
-    if ($(window).width() < 768) {
-      device = {isPhone: true};
-    }
-
-    return device;
+    return {
+      isPhone: function() {
+        return $(window).width() < 768;
+      }
+    };
   });

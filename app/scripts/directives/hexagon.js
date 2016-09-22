@@ -15,11 +15,12 @@ angular.module('mindInsuranceApp')
       scope: {},
       bindToController: {
         ngModel: '=',
-        ngValue: '='
+        ngValue: '=',
+        type: '@',
+        filled: '='
       },
       controller: function () {
-        var vm = this;
-        
+        var vm = this;        
       },
       controllerAs: 'vm'
     };

@@ -1,5 +1,6 @@
 <label class="hexagon-label">
-  <input type="radio" ng-model="vm.ngModel" ng-value="vm.ngValue">
+  <input ng-if="vm.type=='radio'" type="radio" ng-model="vm.ngModel" ng-value="vm.ngValue">
+  <input ng-if="vm.type=='checkbox'" type="checkbox" ng-value="vm.ngValue" ng-checked="vm.filled" disabled>
   <div class="hexagon">
     <span class="figure">{{vm.ngValue}}</span>
   </div>
