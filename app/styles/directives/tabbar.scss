@@ -39,7 +39,7 @@
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: $mobileEnd) {
   .tab-bar {
     display: flex;
 
@@ -65,7 +65,7 @@
     }
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $tabletStart) {
   .tab {
     font-size: 1.1rem;
     font-weight: 300;
