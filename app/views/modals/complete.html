@@ -1,0 +1,13 @@
+<div class="complete-modal">
+  <div class="content-wrapper">
+    <div class="icon-box"></div>
+    <div ng-if="!$ctrl.warning" class="step">Step {{$ctrl.step}}</div>
+    <div class="title">{{$ctrl.warning ? 'Your about to leave this assessment' : $ctrl.title + ' Complete'}}</div>
+    <div class="detail">If you choose not to continue, the questions you have completed will not be saved</div>
+    <div class="button-box">
+      <button ng-if="$ctrl.warning" class="btn btn-cancel" ng-click="$ctrl.cancel()">Cancel</button>
+      <button ng-if="$ctrl.warning" class="btn btn-leave" ng-click="$ctrl.leave()">Yes I want to leave</button>
+      <button ng-if="!$ctrl.warning" class="btn btn-ok" ng-click="$ctrl.ok()">OK</button>
+    </div>
+  </div>
+</div>

@@ -93,6 +93,9 @@ button {
 .modal-background {
   background-color: $modal-bgcolor;
 }
+.backdrop {
+  background-color: rgba(white, 0.7);
+}
 .gray-border {
   border: $gray 1px solid;
 }

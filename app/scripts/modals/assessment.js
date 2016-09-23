@@ -8,7 +8,7 @@
  * Controller of the mindInsuranceApp
  */
 angular.module('mindInsuranceApp')
-  .controller('ModalAssessmentCtrl', function ($uibModalInstance, detectDevice, step) {
+  .controller('ModalAssessmentCtrl', function ($uibModalInstance, $uibModal, detectDevice, step) {
     var $ctrl = this;
     $ctrl.intro = false;      // in mobile phone, an intro modal shows up before start activity
 
@@ -16,6 +16,7 @@ angular.module('mindInsuranceApp')
     $ctrl.questionIndex = 0;
     $ctrl.questions = [];
     $ctrl.responses = [];
+    $ctrl.nextLabel = 'Next';
 
     switch (step) {
       case 1:
@@ -60,10 +61,59 @@ angular.module('mindInsuranceApp')
       $ctrl.intro = false;
     }
     $ctrl.next = function() {
+      /* temp */
+      if ($ctrl.questionIndex == 0) {
+        $ctrl.questionIndex = $ctrl.questions.length - 2;
+      }
+      /* temp */
+
+      if ($ctrl.questionIndex === $ctrl.questions.length-1) { // finished
+        $uibModal.open({
+          animation: true,
+          templateUrl: 'views/modals/complete.html',
+          controller: 'ModalCompleteCtrl',
+          controllerAs: '$ctrl',
+          windowClass: 'backdrop',
+          resolve: {
+            step: step,
+            warning: false,
+            title: function() {
+              return $ctrl.title;
+            }
+          }
+        }).result.then(function() {
+          $uibModalInstance.close(true);
+        });
+
+        return;
+      }
+
       $ctrl.questionIndex++;
+      if ($ctrl.questionIndex === $ctrl.questions.length-1) { // last question
+        $ctrl.nextLabel = 'Finish';
+      }
       console.log ($ctrl.questionIndex, $ctrl.responses);
     }
     $ctrl.close = function() {
-      $uibModalInstance.close();
+      if ($ctrl.intro) {
+        $uibModalInstance.close(false);
+        return;
+      }
+      $uibModal.open({
+        animation: true,
+        templateUrl: 'views/modals/complete.html',
+        controller: 'ModalCompleteCtrl',
+        controllerAs: '$ctrl',
+        windowClass: 'backdrop',
+        resolve: {
+          step: step,
+          warning: true,
+          title: null
+        }
+      }).result.then(function(leave) {
+        if (leave) {
+          $uibModalInstance.close(false);
+        }
+      });
     }
   });

@@ -1,0 +1,94 @@
+@import '../variables.scss';
+
+.complete-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .content-wrapper {
+    background-color: $green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: $dark-blue;
+    line-height: 1;
+
+    .icon-box {
+      background-color: white;
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      margin: 10px 0;
+    }
+    .step {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 400;
+      margin: 10px 0;
+    }
+    .title {
+      width: 70%;
+      font-size: 3rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .detail {
+      width: 60%;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+    }
+    .button-box {
+      margin: 20px 0 5px;
+
+      .btn {
+        border: 2px solid white;
+        padding: 11px 0;
+        font-size: 1.5rem;
+        color: white;
+      }
+      .btn-leave {
+        background-color: $dark-gray !important;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobileEnd) {
+    .content-wrapper {
+      width: 90%;
+
+      .title, .detail {
+        width: 100%;
+      }
+      .detail {
+        font-size: 2rem;
+      }
+      .button-box {
+        width: 55%;
+
+        .btn {
+          width: 100%;
+        }
+        .btn-leave {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: $tabletStart) {
+    .content-wrapper {
+      width: 70%;
+
+      .btn {
+        width: 200px;
+      }
+      .btn-leave {
+        margin-left: 20px;
+      }
+    }
+  }
+}
