@@ -22,8 +22,13 @@
       Question {{$ctrl.questionIndex+1}} of {{$ctrl.nQuestions}}
     </div>
     <div class="question">{{$ctrl.questions[$ctrl.questionIndex]}}</div>
-    <hexagon ng-repeat="r in $ctrl.responseSelectors track by $index" type="radio" ng-model="$ctrl.responses[$ctrl.questionIndex]" ng-value="$index+1" />
-
-    <button class="btn btn-next" ng-click="$ctrl.next()">Next</button>
+    <div class="answer-box">
+      <div class="answers">
+        <span class="leftmost-answer">{{$ctrl.responseSelectors[0]}}</span>
+        <hexagon ng-repeat="r in $ctrl.responseSelectors track by $index" type="radio" ng-model="$ctrl.responses[$ctrl.questionIndex]" ng-value="{key:$index,value:r}" />
+        <span class="rightmost-answer">{{$ctrl.responseSelectors[$ctrl.responseSelectors.length-1]}}</span>
+      </div>
+      <button class="btn btn-next" ng-click="$ctrl.next()">Next</button>
+    </div>
   </div>
 </div>

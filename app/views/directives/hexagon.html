@@ -1,7 +1,12 @@
-<label class="hexagon-label">
-  <input ng-if="vm.type=='radio'" type="radio" ng-model="vm.ngModel" ng-value="vm.ngValue">
-  <input ng-if="vm.type=='checkbox'" type="checkbox" ng-value="vm.ngValue" ng-checked="vm.filled" disabled>
-  <div class="hexagon">
-    <span class="figure">{{vm.ngValue}}</span>
-  </div>
-</label>
+<div class="hexagon-wrapper">
+  <label class="hexagon-label">
+    <input ng-if="vm.type=='radio'" type="radio" ng-model="vm.ngModel" ng-value="vm.ngValue.key">
+    <input ng-if="vm.type=='checkbox'" type="checkbox" ng-value="vm.ngValue" ng-checked="vm.filled" disabled>
+    <div class="hexagon">
+      <span ng-if="vm.type=='checkbox'" class="figure">{{vm.ngValue}}</span>
+    </div>
+    <span ng-if="vm.type=='radio'" class="hexagon-description">{{vm.ngValue.value}}</span>
+  </label>
+  <div ng-if="vm.type=='radio'" class="line"/>
+  <div ng-if="vm.type=='radio'" class="border-line"/>
+</div>

@@ -1,8 +1,41 @@
 @import '../variables.scss';
 
-.hexagon-label {
-  font-size: 50px;
+.hexagon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 40px;
 
+  .hexagon-description {
+    position: absolute;
+    display: none;
+    left: -120%;
+    top: -2em;
+    width: 300%;
+    color: $dark-blue;
+    text-align: center;
+    @include normal-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .line {
+    background-color: $brown;
+    width: 0.8em;
+    height: 2px;
+  }
+  .border-line {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -$padding;
+    margin-right: -$padding;
+    height: 1px;
+    background-color: $dark-blue;
+  }
+  label {
+    margin-bottom: 0;
+  }
   input {
     display: none;
   }
@@ -13,6 +46,9 @@
   input:checked + .hexagon {
     background-color: $brown;
     color: white;
+  }
+  input:checked ~ .hexagon-description {
+    display: block;
   }
 
   .hexagon {
@@ -53,5 +89,27 @@
     right: -0.3536em;
     border-bottom: solid 2px $brown;
     border-right: solid 2px $brown;
+  }
+
+  @media only screen and (max-width: 767px) {
+    display: block;
+
+    .hexagon-label {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .line {
+      display: none;
+    }
+    .border-line {
+      display: block;
+    }
+    .hexagon-description {
+      display: block;
+      position: initial;
+      width: initial;
+    }
   }
 }
