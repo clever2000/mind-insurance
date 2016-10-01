@@ -69,7 +69,19 @@ angular.module('mindInsuranceApp')
             }
           }
 
-          if (vm.step === 2) {
+          /* activity handlers */
+
+          if (vm.step === 1) {
+            vm.button2.onClick = function() {
+              $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modals/mindfulness-practice.html',
+                controller: 'ModalMindfulnessPracticeCtrl',
+                controllerAs: '$ctrl',
+                windowClass: 'modal-background'                
+              });
+            }
+          } else if (vm.step === 2) {
             vm.button2.onClick = function() {
               $uibModal.open({
                 animation: true,

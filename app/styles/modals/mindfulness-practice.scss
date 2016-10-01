@@ -1,0 +1,93 @@
+@import '../variables.scss';
+
+.mindfulness-practice-modal {
+  padding: $padding;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .recording-list {
+    flex: 1;
+    overflow-y: auto;
+  }
+  .recording-item {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: solid 1px white;
+    @include normal-font;
+
+    .no {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+    .tool {
+      flex: 1;
+      padding-right: 10px;
+
+      .play-pause {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $dark-yellow;
+        margin-right: 15px;
+        vertical-align: middle;
+      }
+      .name {
+        font-size: 1.2rem;
+        vertical-align: middle;
+      }
+
+      .graph {
+        margin: 10px 0;
+        position: relative;
+        .duration {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background: black;
+          color: white;
+          font-size: 0.8rem;
+          padding: 2px;
+        }
+      }
+      .frequency-bar {
+        position: relative;
+        height: 20px;
+        & > * {
+          position: absolute;
+          right: 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .date {
+      width: 110px;
+      font-size: 0.8rem;
+      text-align: right;
+      padding-top: 10px;
+    }
+  }
+
+  @media only screen and (max-width: $mobileEnd) {
+    .date {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: $desktopStart) {
+    .recording-item {
+      padding: 10px 5*$padding;
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+}

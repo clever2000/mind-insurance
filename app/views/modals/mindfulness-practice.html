@@ -1,0 +1,25 @@
+<div class="mindfulness-practice-modal">
+  <div class="close-box">
+    <button class="btn btn-close" type="button" ng-click="$ctrl.close()">&times;</button>
+  </div>
+  <div class="title">My Daily Mindfulness Practice</div>
+  <div class="recording-list">
+    <div ng-repeat="recording in $ctrl.recordings track by $index" class="recording-item">
+      <div class="no">0{{$index + 1}}</div>
+      <div class="tool">
+        <div>
+          <div class="play-pause"></div>
+          <span class="name">{{recording.name}}</span>
+        </div>
+        <div class="graph">
+          <div style="background: red; height: 30px;" />
+          <div class="duration">{{recording.duration}}</div>
+        </div>
+        <div class="frequency-bar">
+          <span>{{recording.frequency}}K</span>
+        </div>
+      </div>
+      <div class="date">{{recording.date}}</div>
+    </div>
+  </div>
+</div>
