@@ -6,6 +6,11 @@
 
     .indicator {
       flex: 2;
+      display: flex;
+      flex-direction: column;
+      & > * {
+        flex: 1;
+      }
     }
     .mindfulness {
       flex: 1;

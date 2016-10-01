@@ -165,9 +165,11 @@ button {
       }
     }
     .content-area {
-      margin-left: 10rem;
-      overflow-y: auto;
+      left: 10rem;
+      right: 0;
       height: 100%;
+      position: absolute;
+      overflow-y: auto;
     }
   }
 }
