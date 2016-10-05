@@ -55,7 +55,7 @@ angular.module('mindInsuranceApp')
           bgImageUrl: 'assets/images/tile_bg_' + vm.step + '.jpg'
         });
 
-        if (vm.step === 1 || vm.step === 2 || vm.step === 3) { // placeholder
+        if (vm.step === 1 || vm.step === 2 || vm.step === 4) { // placeholder
           vm.button1 = {
             label: "Whats this?",
             onClick: function() {
@@ -68,20 +68,30 @@ angular.module('mindInsuranceApp')
               console.log ("Begin")
             }
           }
+        }
+        else {
+          vm.button1 = {
+            label: "View All",
+            onClick: function() {
+              console.log ("View All")
+            }
+          }
+        }
 
-          /* activity handlers */
-
-          if (vm.step === 1) {
+        /* activity handlers */
+        switch (vm.step) {
+          case 1:
             vm.button2.onClick = function() {
               $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modals/mindfulness-practice.html',
                 controller: 'ModalMindfulnessPracticeCtrl',
                 controllerAs: '$ctrl',
-                windowClass: 'modal-background'                
+                windowClass: 'modal-background'
               });
             }
-          } else if (vm.step === 2) {
+            break;
+          case 2:
             vm.button2.onClick = function() {
               $uibModal.open({
                 animation: true,
@@ -94,15 +104,23 @@ angular.module('mindInsuranceApp')
                 }
               });
             }
-          }
-        }
-        else {
-          vm.button1 = {
-            label: "View All",
-            onClick: function() {
-              console.log ("View All")
+            break;
+          case 4:
+            vm.button2.onClick = function() {
+              $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modals/positive-goal.html',
+                controller: 'ModalPositiveGoalCtrl',
+                controllerAs: '$ctrl',
+                windowClass: 'modal-background',
+                resolve: {
+                  step: vm.step
+                }
+              });
             }
-          }
+            break;
+          default:
+            break;
         }
       },
       controllerAs: 'vm'

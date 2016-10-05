@@ -1,0 +1,74 @@
+@import '../variables.scss';
+
+.positive-goal-modal {
+  padding: $padding;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .step {
+    color: $brown;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  .title {
+    color: $dark-blue;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  .direction {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: $dark-blue;
+    @include normal-font;
+  }
+  .video-list {
+    overflow-y: auto;
+    flex: 1;
+    font-weight: 200;
+    @include normal-font;
+
+    .video-item {
+      display: inline-block;
+      width: 32%;
+      margin-bottom: 20px;
+
+      .video-player {
+        height: 200px;
+        background-color: cyan;
+      }
+      .video-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      .video-title {
+        font-weight: 600;
+      }
+      .video-description {
+
+      }
+    }
+    .video-item:not(:last-child) {
+      margin-right: 2%;
+    }
+  }
+
+  @media only screen and (max-width: $mobileEnd) {
+    .video-item {
+      width: 100% !important;
+    }
+  }
+
+  @media only screen and (min-width: $tabletStart) {
+    .step, .title {
+      display: inline;
+    }
+  }
+  @media only screen and (min-width: $desktopStart) {
+    padding: 2*$padding 6*$padding;
+  }
+}
