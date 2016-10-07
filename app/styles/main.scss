@@ -67,7 +67,9 @@ a:hover, a:visited, a:link, a:active {
 button {
   background-color: transparent !important;
 }
-
+button:hover, input[type=button]:hover {
+  background-color: $dark-blue !important;
+}
 .h-align-container {
   @include h-align-container;
 }
@@ -173,6 +175,16 @@ button {
     }
   }
 }
+
+@media only screen and (min-width: $tabletStart) and (max-width: $tabletEnd){
+  .visible-sm-block {
+    display: block !important;
+  }
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
 @media only screen and (min-width: $desktopStart) {
   html {
     font-size: $desktopBaseSize;
