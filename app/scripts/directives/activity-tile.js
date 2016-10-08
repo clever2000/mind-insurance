@@ -63,9 +63,9 @@ angular.module('mindInsuranceApp')
             }
           }
           vm.button2 = {
-            label: "Begin",
+            label: "View All",
             onClick: function() {
-              console.log ("Begin")
+              console.log ("View All")
             }
           }
         }

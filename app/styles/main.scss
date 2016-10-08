@@ -47,10 +47,6 @@
   height: 100%;
   background-color: transparent;
 }
-.btn {
-  border: solid 1px $dark-blue;
-  color: $dark-blue;
-}
 
 /* Styles */
 
@@ -59,17 +55,43 @@ body {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-family: "Libel Suit";
+  line-height: 1.2;
 }
 
 a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
 button {
-  background-color: transparent !important;
+  background-color: transparent;
+  border-radius: 2px;
+  width: 118px;
+  height: 43px;
+  font-size: 17px;
+  text-align: center;
 }
-button:hover, input[type=button]:hover {
-  background-color: $dark-blue !important;
+.btn-white {
+  border: solid 1px white;
+  color: white;
 }
+.btn-brown {
+  border: solid 1px $brown;
+  color: $brown;
+}
+.btn-blue {
+  border: solid 1px $dark-blue;
+  color: $dark-blue;
+}
+.highlight-blue:hover {
+  background-color: $dark-blue;
+  border: solid 1px white;
+  color: white;
+}
+.highlight-gray:hover {
+  background-color: $dark-gray;
+  border: solid 1px white;
+  color: white;
+}
+
 .h-align-container {
   @include h-align-container;
 }
@@ -135,9 +157,6 @@ button:hover, input[type=button]:hover {
     flex-direction: column;
     .tab-bar-area {
       overflow-x: auto;
-      .tab-bar {
-        min-width: 375px;
-      }
     }
     .content-area {
       flex: 1;
@@ -159,7 +178,7 @@ button:hover, input[type=button]:hover {
       height: 100%;
       overflow-y: auto;
       position: absolute;
-      width: 10rem;
+      width: 9rem;
 
       &::-webkit-scrollbar {
         width: 0px;  /* remove scrollbar space */
@@ -167,7 +186,7 @@ button:hover, input[type=button]:hover {
       }
     }
     .content-area {
-      left: 10rem;
+      left: 9rem;
       right: 0;
       height: 100%;
       position: absolute;

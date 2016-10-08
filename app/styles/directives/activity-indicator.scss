@@ -2,67 +2,76 @@
 
 .activity-indicator {
   background-color: $dark-blue;
+  .detail {
+    display: none;
+  }
   .step-label {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: bold;
     color: $brown;
   }
   .description-label {
-    font-size: 2rem;
+    font-size: 50px;
     font-weight: bolder;
     color: white;
-  }
-  .whats-this, .begin {
-    flex: 1;
-    text-align: center;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    font-size: 0.8rem;
-    color: white;
-    border: white 1px solid;
   }
 }
 
 @media only screen and (max-width: $mobileEnd) {
   .activity-indicator {
-    padding: $padding;
+    padding: 1.5*$padding;
+    .description-label {
+      font-size: 40px;
+    }
     .button-container {
       display: flex;
-      margin-top: 5px;
+      margin-top: 10px;
 
       .whats-this {
         margin-right: $padding*0.7;
       }
       .whats-this, .begin {
-        height: 2.5rem;
-        line-height: 2.5rem;
-        font-size: 1.4rem;
+        flex: 1;
       }
     }
-    .step-label {
-      font-size: 2rem;
-    }
     .description-label {
-      font-size: 2.5rem;
+      font-size: 40px;
     }
   }
 }
-@media only screen and (min-width: $tabletStart) {
+@media only screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
   .activity-indicator {
-    padding: 2*$padding $padding;
+    padding: 4*$padding 2*$padding;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 
     .button-container {
-      width: 180px;
-      .whats-this, .begin {
-        width: 100%;
-      }
+      width: 120px;
       .whats-this {
-        margin-bottom: $padding*0.7;
+        margin-bottom: 17px;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $desktopStart) {
+  .activity-indicator {
+    padding: 2*$padding $padding 1.7*$padding 2*$padding;
+
+    .detail {
+      display: block;
+      margin: 15px 60px 15px 0;
+      font-size: 14px;
+      color: white;
+      @include normal-font;
+    }
+    .whats-this {
+      display: none;
+    }
+    .begin {
+      width: 190px;
     }
   }
 }

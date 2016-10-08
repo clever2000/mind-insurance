@@ -3,8 +3,8 @@
 .happiness-lab {
   .top-bar {
     display: flex;
-    padding: 0.5rem 0 0.5rem 0.5rem;
-    
+    padding: 1.5*$padding 0 1.5*$padding 1.5*$padding;
+
     .indicator {
       flex: 2;
       display: flex;
@@ -15,9 +15,10 @@
     }
     .mindfulness {
       flex: 1;
-      margin-left: 1rem;
+      margin-left: $padding;
       .activity-tile {
-        padding: 0 0.5*$padding 0 0 !important;
+        margin: 0;
+        height: 100%;
       }
     }
   }
@@ -25,5 +26,9 @@
   table {
     width: 100%;
     table-layout: fixed;
+  }
+
+  @media only screen and (min-width: $desktopStart){
+    padding-right: $padding;
   }
 }

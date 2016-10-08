@@ -1,13 +1,14 @@
 @import '../variables.scss';
 
 .activity-tile {
-  padding: 0.5*$padding;
-  height: 14rem;
+  margin-top: 1.5*$padding;
+  margin-left: 1.5*$padding;
+  height: 18rem;
 
   .content-tile {
     width: 100%;
     height: 100%;
-    padding: 0.5*$padding;
+    padding: 0.7*$padding;
     background-color: $green;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +18,7 @@
       width: 100%;
       height: 100%;
       position: relative;
-      padding: 0.7*$padding 0.5*$padding;
+      padding: $padding $padding;
       display: flex;
       flex-direction: column;
       border: solid 1px $dark-blue;
@@ -28,7 +29,7 @@
       border: none;
     }
   }
-  
+
   .count-box-wrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -36,8 +37,10 @@
   .count-box {
     width: 2.5rem;
     height: 2rem;
+    position: relative;
+    top: -8px;
     line-height: 2rem;
-    border-radius: 17%;
+    border-radius: 3px;
     background-color: $dark-yellow;
     color: white;
     font-weight: bold;
@@ -46,7 +49,7 @@
     box-sizing: content-box;
   }
   .description-tile {
-    font-size: 1.7rem;
+    font-size: 2.8rem;
     color: white;
     font-weight: 300;
   }
@@ -58,46 +61,33 @@
     .button1 {
       margin-right: $padding*0.7;
     }
-    button {
-      width: 120px;
-      height: 1.5rem;
-      line-height: 1.5rem;
-      font-size: 0.8rem;
-      color: white;
-      border: white 1px solid;
-      box-sizing: content-box;
-      text-align: center;
-    }
   }
 }
 
 @media only screen and (max-width: $mobileEnd) {
   .activity-tile {
+    margin-right: 1.5*$padding;
     .count-box {
       width: 3rem;
       height: 2.5rem;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       line-height: 2.5rem;
     }
     .button-container {
       button {
-        flex: 1;
-        height: 2rem;
-        line-height: 2rem;
-        font-size: 1.4rem;
+        height: 37px;
       }
     }
     .description-tile {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 }
-@media only screen and (min-width: $tabletStart) {
+@media only screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
   .activity-tile {
-    height: 13rem;
-
-    .content-tile {
-
-    }
+    height: 14rem;
+  }
+  .description-tile {
+    font-size: 38px !important;
   }
 }

@@ -1,11 +1,12 @@
 <div class="activity-indicator">
   <div>
-    <div class="step-label">Step 0{{vm.step}} out of 04</div>
+    <div class="step-label">Step 0{{vm.step}} out of 05</div>
     <div class="description-label">{{vm.stepTitle}}</div>
+    <div class="detail">{{vm.detail}}</div>
   </div>
   <div class="button-container">
-    <button class="whats-this" ng-click="vm.openWhatsThis()">What's this</button>
-    <button class="begin">Begin</button>
+    <button class="btn-white highlight-gray whats-this" ng-click="vm.openWhatsThis()">What's this?</button>
+    <button class="btn-white highlight-gray begin">Begin</button>
   </div>
   <!-- <Modal
     show={this.state.whatsThisModalVisible}

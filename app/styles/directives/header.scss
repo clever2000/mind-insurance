@@ -12,8 +12,8 @@
     align-items: center;
   }
   #avatar {
-    width: 100px;
-    height: 100px;
+    width: 6rem;
+    height: 6rem;
     margin-right: 15px;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,34 +23,19 @@
   }
 
   .welcome-label {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 200;
   }
   .name-label {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   .right-box {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  .swb-score {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-right: 20px;
-    .circle {
-      width: 2.5rem;
-      height: 2.5rem;
-      line-height: 2.5rem;
-      border-radius: 50%;
-      border: $green 5px solid;
-      margin-left: 50%;
-      transform: translateX(-50%);
-      box-sizing: content-box;
-      font-weight: bold;
-    }
   }
   .subscription-level {
     font-size: 0.9rem;
@@ -70,7 +55,6 @@
       font-weight: bold;
     }
   }
-  .swb-score-label,
   .subscription-level-label {
     font-size: 0.8rem;
     font-weight: 200;

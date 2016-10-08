@@ -5,32 +5,44 @@
 }
 .tab {
   width: 100%;
-  padding: 1rem 0;
   background-color: transparent;
   color: $brown;
+  white-space: nowrap;
 }
 .active-tab .tab {
   background-color: $green;
   color: $dark-blue;
 }
 .happiness-lab .tab-image {
-  background-image: url("/assets/images/my_happiness_lab.png");
+  background-image: url("/assets/images/Icon_HappinessLab.png");
 }
 .profile .tab-image {
-  background-image: url("/assets/images/my_profile.png");
+  background-image: url("/assets/images/Icon_Profile.png");
 }
 .upgrade .tab-image {
-  background-image: url("/assets/images/upgrade.png");
+  background-image: url("/assets/images/Icon_Upgrade.png");
+}
+.contact .tab-image {
+  background-image: url("/assets/images/Icon_Help.png");
+}
+.community .tab-image {
+  background-image: url("/assets/images/Icon_Community.png");
 }
 .active-tab {
   .happiness-lab .tab-image {
-    background-image: url("/assets/images/my_happiness_lab_active.png");
+    background-image: url("/assets/images/Icon_HappinessLab_Hover.png");
   }
   .profile .tab-image {
-    background-image: url("/assets/images/my_profile_active.png");
+    background-image: url("/assets/images/Icon_Profile_Hover.png");
   }
   .upgrade .tab-image {
-    background-image: url("/assets/images/upgrade_active.png");
+    background-image: url("/assets/images/Icon_Upgrade_Hover.png");
+  }
+  .contact .tab-image {
+    background-image: url("/assets/images/Icon_Help_Hover.png");
+  }
+  .community .tab-image {
+    background-image: url("/assets/images/Icon_Community_Hover.png");
   }
 }
 .tab-image {
@@ -43,37 +55,28 @@
   .tab-bar {
     display: flex;
 
-    a:nth-child(1) {
-      flex: 265;
-    }
-    a:nth-child(2) {
-      flex: 180;
-    }
-    a:nth-child(3) {
-      flex: 197;
-    }
-
     .tab {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 300;
+      padding: 1rem 1.2rem;
       @include h-align-container;
     }
     .tab-image {
-      width: 50px;
-      height: 50px;
-      margin-right: 0.5rem;
+      width: 25px;
+      height: 25px;
     }
   }
 }
 @media only screen and (min-width: $tabletStart) {
   .tab {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 300;
+    padding: 0.2rem 0 1rem;
     @include v-align-container;
   }
   .tab-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 0.5rem;
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: -10px;
   }
 }
