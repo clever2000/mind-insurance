@@ -9,18 +9,24 @@ $desktopStart: 1025px;
 $padding: 10px;
 
 $red: rgb(243, 84, 102);
-$green: rgb(100,191, 180);
+$green: rgb(100, 191, 180);
 $pink: rgb(214, 103, 205);
 $violet: rgb(101, 99, 164);
 $brown: rgb(92, 69, 46);
 $dark-blue: rgb(6, 35, 69);
-$gray: rgb(242,236,226);
+$gray: rgb(242, 236, 226);
 $dark-gray: rgb(102, 102, 102);
 $dark-yellow: rgb(255, 126, 103);
 $blue: rgb(41, 128, 185);
 $modal-bgcolor: rgb(219, 214, 205);
 $mindfuless-practice-bgcolor: rgb(204, 204, 204);
 $play-pause-bgcolor: rgb(255, 85, 0);
+$bright-green: rgb(111, 198, 109);
+$tile-step1: rgb(254, 128, 110);
+$tile-step2: rgb(6, 35, 69);
+$tile-step3: rgb(6, 35, 69);
+$tile-step4: rgb(230, 126, 34);
+$tile-step5: rgb(230, 126, 34);
 
 @mixin v-align-container {
   display: flex;

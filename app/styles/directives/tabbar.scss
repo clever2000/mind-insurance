@@ -8,6 +8,10 @@
   background-color: transparent;
   color: $brown;
   white-space: nowrap;
+  border-top: solid 1px #ffffff;
+  border-bottom: solid 1px #b7b5b2;
+  border-right: solid 1px #b7b5b2;
+  margin-bottom: 1px;
 }
 .active-tab .tab {
   background-color: $green;

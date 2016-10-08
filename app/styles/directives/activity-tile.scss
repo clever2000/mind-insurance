@@ -4,12 +4,13 @@
   margin-top: 1.5*$padding;
   margin-left: 1.5*$padding;
   height: 18rem;
+  box-shadow: 2px 2px 1px gray;
 
   .content-tile {
     width: 100%;
     height: 100%;
     padding: 0.7*$padding;
-    background-color: $green;
+    background-color: $gray;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,15 +25,13 @@
       border: solid 1px $dark-blue;
     }
   }
-  &.step1 {
-    .border-box {
-      border: none;
-    }
-  }
 
   .count-box-wrapper {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
+    .step-num {
+      visibility: hidden;
+    }
   }
   .count-box {
     width: 2.5rem;
@@ -50,7 +49,6 @@
   }
   .description-tile {
     font-size: 2.8rem;
-    color: white;
     font-weight: 300;
   }
   .button-container {
@@ -60,6 +58,73 @@
 
     .button1 {
       margin-right: $padding*0.7;
+    }
+  }
+  button {
+    border: solid 1px $brown;
+    color: $brown;
+  }
+  button:hover {
+    background-color: $dark-blue;
+    color: white;
+  }
+
+  &.step0 {
+    .content-tile {
+      background-color: $green;
+    }
+    .border-box {
+      border: none;
+    }
+    .description-tile {
+      color: white;
+    }
+    button {
+      border: solid 1px white;
+      color: white;
+    }
+    button:hover {
+      background-color: $dark-blue;
+    }
+  }
+  &.step1 {
+    .border-box {
+      border-color: $tile-step1;
+    }
+    .description-tile {
+      color: $tile-step1;
+    }
+  }
+  &.step2 {
+    .border-box {
+      border-color: $tile-step2;
+    }
+    .description-tile {
+      color: $tile-step2;
+    }
+  }
+  &.step3 {
+    .border-box {
+      border-color: $tile-step3;
+    }
+    .description-tile {
+      color: $tile-step3;
+    }
+  }
+  &.step4 {
+    .border-box {
+      border-color: $tile-step4;
+    }
+    .description-tile {
+      color: $tile-step4;
+    }
+  }
+  &.step5 {
+    .border-box {
+      border-color: $tile-step5;
+    }
+    .description-tile {
+      color: $tile-step5;
     }
   }
 }
@@ -86,8 +151,48 @@
 @media only screen and (min-width: $tabletStart) and (max-width: $tabletEnd) {
   .activity-tile {
     height: 14rem;
+    margin-right: 3px;
+    margin-bottom: 3px;
+
+    .border-box {
+      padding: 2*$padding $padding !important;
+    }
+    .description-tile {
+      font-size: 36px !important;
+    }
+    .count-box-wrapper .step-num {
+      visibility: visible;
+      font-size: 1.5rem;
+      color: $brown;
+    }
+    &.step0 {
+      .description-tile {
+        margin-top: -40px;
+        width: 80%;
+        font-size: 38px !important;
+      }
+      .count-box-wrapper .step-num {
+        visibility: hidden;
+      }
+    }
   }
-  .description-tile {
-    font-size: 38px !important;
+}
+
+@media only screen and (min-width: $desktopStart) {
+  .activity-tile {
+    height: 16rem;
+    .border-box {
+      padding: 2*$padding 2*$padding !important;
+    }
+    .description-tile {
+      height: 7rem;
+      display: flex;
+      align-items: center;
+    }
+    &.step0 {
+      .description-tile {
+        font-size: 2.3rem;
+      }
+    }
   }
 }

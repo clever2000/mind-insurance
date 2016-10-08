@@ -6,6 +6,10 @@
   .upgrade-content {
     padding: 0.7*$padding;
     background-color: $gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 1px gray;
   }
 
   .bordered {
@@ -16,10 +20,12 @@
     font-size: 1.4rem;
     font-weight: 100;
     margin-bottom: 5px;
+    color: $blue;
   }
   .second-line {
     font-size: 2.8rem;
     font-weight: 500;
+    color: $blue;
   }
   .button-wrapper {
     display: flex;
@@ -36,13 +42,13 @@
 @media only screen and (min-width: $tabletStart) {
   .upgrade-banner {
     .bordered {
-      padding: 2.5*$padding 0.7*$padding
+      padding: 3.5*$padding $padding
     }
     .wrapper {
       display: flex;
       justify-content: space-between;
       .button-wrapper {
-        width: 45%;
+        width: 43%;
       }
     }
   }
@@ -50,19 +56,27 @@
 
 @media only screen and (min-width: $desktopStart) {
   .upgrade-banner {
-    height: 13rem;
+    height: 16rem;
+    padding: 0;
+    margin-left: 1.5*$padding;
+    margin-top: 1.5*$padding;
+
     .upgrade-content {
       height: 100%;
     }
     .bordered {
       height: 100%;
       position: relative;
+      padding: 2*$padding;
+    }
+    .first-line {
+      margin-top: 3rem;
     }
     .wrapper .button-wrapper {
-      width: 75%;
-      max-width: 1000px;
+      display: block;
+      width: 70%;
       position: absolute;
-      bottom: 0.7*$padding;
+      bottom: 1.7*$padding;
     }
   }
 }

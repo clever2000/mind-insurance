@@ -5,16 +5,17 @@
         <activity-indicator />
       </div>
       <div class="mindfulness">
-        <activity-tile step="1"/>
+        <activity-tile step="0"/>
       </div>
     </div>
     <table>
       <tr>
-        <td><activity-tile step="2" /></td>
+        <td><activity-tile step="4" /></td>
         <td><activity-tile step="3" /></td>
       </tr>
       <tr>
-        <td><activity-tile step="4" /></td>
+        <td><activity-tile step="2" /></td>
+        <td><activity-tile step="1" /></td>
       </tr>
       <tr>
         <td><upgrade-banner /></td>
@@ -26,11 +27,13 @@
     <activity-indicator />
     <div class="hidden-xs">
       <slick arrows=false dots=true infinite=false speed=300 slides-to-show=2 slides-to-scroll=1>
-        <activity-tile ng-repeat="at in vm.activityTiles" step="at.step" />
+        <activity-tile step="0" />
+        <activity-tile ng-repeat="at in vm.activityTiles | orderBy:'':true" step="at.step" />
       </slick>
     </div>
     <div class="visible-xs-block">
-      <activity-tile ng-repeat="at in vm.activityTiles" step="at.step" />
+      <activity-tile step="0" />
+      <activity-tile ng-repeat="at in vm.activityTiles | orderBy:'':true" step="at.step" />
     </div>
     <upgrade-banner />
   </div>

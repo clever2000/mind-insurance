@@ -19,69 +19,81 @@ angular.module('mindInsuranceApp')
       controller: function() {
         var vm = this;
         switch (vm.step) {
-          case 1:
+          case 0:
             Object.assign(vm, {
               count: 12,
-              stepTitle: 'My Daily Mindfulness Practice'
+              stepTitle: 'My Daily Mindfulness Practice',
+              button1: {
+                label: "Begin"
+              },
+              button2: {
+                label: "View All"
+              }
+            })
+            break;
+          case 1:
+            Object.assign(vm, {
+              count: 0,
+              stepTitle: 'My SWB Score',
+              button1: {
+                label: "Begin"
+              },
+              button2: {
+                label: "View Score"
+              }
             })
             break;
           case 2:
             Object.assign(vm, {
               count: 0,
-              stepTitle: 'Subjective Wellbeing Assessment'
+              stepTitle: 'My Values Results',
+              button2: {
+                label: "View PDF"
+              }
             })
             break;
           case 3:
             Object.assign(vm, {
               count: 0,
-              stepTitle: 'My Goals Insights & Actions'
+              stepTitle: 'My Values Insights & Actions',
+              button2: {
+                label: "View PDF"
+              }
             })
             break;
           case 4:
             Object.assign(vm, {
               count: 0,
-              stepTitle: 'Positive Goal Setting, Theory & Science'
+              stepTitle: 'Positive Goal Setting, Theory & Science',
+              button1: {
+                label: "Begin"
+              },
+              button2: {
+                label: "Watch Again"
+              }
+            })
+            break;
+          case 5:
+            Object.assign(vm, {
+              count: 0,
+              stepTitle: 'My Goals Insights & Actions',
+              button2: {
+                label: "View PDF"
+              }
             })
             break;
           default:
-            Object.assign(vm, {
-              count: 12,
-              stepTitle: 'My Daily Mindfulness'
-            })
             break;
         }
 
         Object.assign(vm, {
-          bgImageUrl: 'assets/images/tile_bg_' + vm.step + '.jpg'
+          bgImageUrl: 'assets/images/tile_icon_' + vm.step + '.png'
         });
-
-        if (vm.step === 1 || vm.step === 2 || vm.step === 4) { // placeholder
-          vm.button1 = {
-            label: "Whats this?",
-            onClick: function() {
-              console.log ("Whats this")
-            }
-          }
-          vm.button2 = {
-            label: "View All",
-            onClick: function() {
-              console.log ("View All")
-            }
-          }
-        }
-        else {
-          vm.button1 = {
-            label: "View All",
-            onClick: function() {
-              console.log ("View All")
-            }
-          }
-        }
 
         /* activity handlers */
         switch (vm.step) {
-          case 1:
-            vm.button2.onClick = function() {
+          case 0:
+            vm.button1.onClick = function() {
               $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modals/mindfulness-practice.html',
@@ -91,8 +103,8 @@ angular.module('mindInsuranceApp')
               });
             }
             break;
-          case 2:
-            vm.button2.onClick = function() {
+          case 1:
+            vm.button1.onClick = function() {
               $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modals/assessment.html',
@@ -106,7 +118,7 @@ angular.module('mindInsuranceApp')
             }
             break;
           case 4:
-            vm.button2.onClick = function() {
+            vm.button1.onClick = function() {
               $uibModal.open({
                 animation: true,
                 templateUrl: 'views/modals/positive-goal.html',

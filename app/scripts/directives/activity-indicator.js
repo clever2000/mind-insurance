@@ -22,7 +22,7 @@ angular.module('mindInsuranceApp')
         Object.assign(vm, {
           step: step,
           stepTitle: 'Values Assessment',
-          detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing eilt, sed do eisumod tempor incididunt ut labore et dolore magna aliqua.',
+          detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing eilt, sed do eisumod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing eilt, sed do eisumod tempor incididunt ut labore et dolore magna aliqua.',
         });
 
         vm.openWhatsThis = function () {
