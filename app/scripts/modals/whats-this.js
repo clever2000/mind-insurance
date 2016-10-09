@@ -11,7 +11,7 @@ angular.module('mindInsuranceApp')
   .controller('ModalWhatsThisCtrl', function ($uibModal, $uibModalInstance, step) {
     var $ctrl = this;
     $ctrl.step = step;
-    $ctrl.beginLabel = "Let's Begin";
+    $ctrl.beginLabel = "Let's Begin!";
 
     switch (step) {
       case 1:

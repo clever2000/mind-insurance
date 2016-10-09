@@ -47,6 +47,9 @@ angular.module('mindInsuranceApp')
             Object.assign(vm, {
               count: 0,
               stepTitle: 'My Values Results',
+              button1: {
+                label: "Begin"
+              },
               button2: {
                 label: "View PDF"
               }
@@ -104,6 +107,32 @@ angular.module('mindInsuranceApp')
             }
             break;
           case 1:
+            vm.button1.onClick = function() {
+              $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modals/assessment.html',
+                controller: 'ModalAssessmentCtrl',
+                controllerAs: '$ctrl',
+                windowClass: 'modal-background',
+                resolve: {
+                  step: vm.step
+                }
+              });
+            }
+
+            vm.button2.onClick = function() {
+              $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modals/swb-score.html',
+                controller: 'ModalSWBScoreCtrl',
+                controllerAs: '$ctrl',
+                windowClass: 'backdrop',
+                resolve: {
+                }
+              });
+            }
+            break;
+          case 2:
             vm.button1.onClick = function() {
               $uibModal.open({
                 animation: true,

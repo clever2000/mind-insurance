@@ -21,6 +21,19 @@ angular.module('mindInsuranceApp')
     switch (step) {
       case 1:
         Object.assign($ctrl, {
+          title: 'Subjective Wellbeing Assessment',
+          direction: 'On the following screens are five statements that you may agree or disagree with. Select the option that most meets your agreement. Please be open and honest in your responding.',
+          nQuestions: 5,
+          responseSelectors: ['Not at all like me', 'Not much like me', 'A little like me', 'Somewhat like me', 'Like me', 'Very much like me']
+        });
+        for (var i = 0; i < $ctrl.nQuestions; i++) {
+          $ctrl.questions.push('If I could live my life over, I would change almost nothing.');
+          $ctrl.responses.push(0);
+        }
+        break;
+
+      case 2:
+        Object.assign($ctrl, {
           title: 'Values Assessment',
           direction: 'Below are a series of statements. Please read each statement carefully and think about how much each statement is or is not like you. Select a response that represents how much the statement is like you.',
           nQuestions: 21,
@@ -32,17 +45,6 @@ angular.module('mindInsuranceApp')
         }
 
         break;
-      case 2:
-        Object.assign($ctrl, {
-          title: 'Subjective Wellbeing Assessment',
-          direction: 'On the following screens are five statements that you may agree or disagree with. Select the option that most meets your agreement. Please be open and honest in your responding.',
-          nQuestions: 5,
-          responseSelectors: ['Not at all like me', 'Not much like me', 'A little like me', 'Somewhat like me', 'Like me', 'Very much like me']
-        });
-        for (var i = 0; i < $ctrl.nQuestions; i++) {
-          $ctrl.questions.push('If I could live my life over, I would change almost nothing.');
-          $ctrl.responses.push(0);
-        }
 
       default:
         break;

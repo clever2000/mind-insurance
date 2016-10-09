@@ -2,6 +2,10 @@
 
 .activity-indicator {
   background-color: $dark-blue;
+  &.step1 {
+    background-color: $tile-step1;
+  }
+
   .detail {
     display: none;
   }

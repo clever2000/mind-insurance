@@ -21,7 +21,7 @@ angular.module('mindInsuranceApp')
         var step = 1  // This should be pulled from service
         Object.assign(vm, {
           step: step,
-          stepTitle: 'Values Assessment',
+          stepTitle: 'Subjective Wellbeing Assessment',
           detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing eilt, sed do eisumod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing eilt, sed do eisumod tempor incididunt ut labore et dolore magna aliqua.',
         });
 

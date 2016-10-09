@@ -1,6 +1,6 @@
 <div class="assessment-modal">
   <div class="close-box">
-    <button class="btn btn-close" type="button" ng-click="$ctrl.close()">&times;</button>
+    <button class="btn-close highlight-blue" type="button" ng-click="$ctrl.close()">&times;</button>
   </div>
   <div ng-if="$ctrl.intro" ng-include="'views/partials/intro.html'">
   </div>
@@ -13,7 +13,7 @@
     </div>
     <div class="divider gray-border" />
     <div class="question-indicator-box">
-      <div class="question-indicator" ng-class="{'scroll': $ctrl.step===1, 'non-scroll': $ctrl.step===2}">
+      <div class="question-indicator" ng-class="{'scroll': $ctrl.step===2, 'non-scroll': $ctrl.step===1}">
         <hexagon ng-repeat="question in $ctrl.questions track by $index" type="checkbox" filled="$index<=$ctrl.questionIndex" ng-value="$index+1" />
       </div>
     </div>
@@ -28,7 +28,7 @@
         <hexagon ng-repeat="r in $ctrl.responseSelectors track by $index" type="radio" ng-model="$ctrl.responses[$ctrl.questionIndex]" ng-value="{key:$index+1,value:r}" />
         <span class="rightmost-answer">{{$ctrl.responseSelectors[$ctrl.responseSelectors.length-1]}}</span>
       </div>
-      <button class="btn btn-next" ng-click="$ctrl.next()" ng-disabled="$ctrl.responses[$ctrl.questionIndex]==0">
+      <button class="btn-blue highlight-blue btn-next" ng-click="$ctrl.next()" ng-disabled="$ctrl.responses[$ctrl.questionIndex]==0">
         {{$ctrl.nextLabel}}
       </button>
     </div>
