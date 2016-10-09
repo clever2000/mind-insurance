@@ -4,6 +4,7 @@
   .top-bar {
     display: flex;
     padding: 1.5*$padding 0 1.5*$padding 1.5*$padding;
+    margin-bottom: 30px;
 
     .indicator {
       flex: 2;
@@ -29,6 +30,7 @@
   }
 
   .tile-row {
+    padding-top: 40px;
     white-space: nowrap;
     overflow-y: auto;
 
@@ -41,6 +43,13 @@
       width: 45%;
       display: inline-block;
       white-space: initial;
+    }
+  }
+
+  @media only screen and (max-width: $mobileEnd){
+    .activity-tile.step0 {
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
   }
 

@@ -10,7 +10,7 @@
     </div>
     <table>
       <tr>
-        <td><activity-tile step="5" /></td>
+        <td><activity-tile step="5" caption-index="1" /></td>
         <td><activity-tile step="4" /></td>
       </tr>
       <tr>
@@ -31,16 +31,16 @@
     <div class="hidden-xs">
       <div class="tile-row">
         <div class="recording-tile">
-          <activity-tile step="0" />
+          <activity-tile step="0" caption-index="0" />
         </div>
-        <div ng-repeat="at in vm.activityTiles | orderBy:'':true" class="result-tile">
-          <activity-tile step="at.step" />
+        <div ng-repeat="at in vm.activityTiles | orderBy:'':true track by $index" class="result-tile">
+          <activity-tile step="at.step" caption-index="$index+1" />
         </div>
       </div>
     </div>
     <div class="visible-xs-block">
-      <activity-tile step="0" />
-      <activity-tile ng-repeat="at in vm.activityTiles | orderBy:'':true" step="at.step" />
+      <activity-tile step="0" caption-index="0" />
+      <activity-tile ng-repeat="at in vm.activityTiles | orderBy:'':true track by $index" step="at.step" caption-index="$index+1" />
     </div>
     <upgrade-banner />
   </div>

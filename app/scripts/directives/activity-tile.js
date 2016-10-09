@@ -14,10 +14,23 @@ angular.module('mindInsuranceApp')
       replace: true,
       scope: {},
       bindToController: {
-        step: '='
+        step: '=',
+        captionIndex: '='
       },
       controller: function() {
         var vm = this;
+
+        switch (vm.captionIndex) {
+          case 0:
+            vm.caption = 'Audio Recordings';
+            break;
+          case 1:
+            vm.caption = 'My Results';
+            break;
+          default:
+            break;
+        }
+
         switch (vm.step) {
           case 0:
             _.assign(vm, {
