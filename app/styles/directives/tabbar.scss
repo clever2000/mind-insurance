@@ -18,35 +18,35 @@
   color: $dark-blue;
 }
 .happiness-lab .tab-image {
-  background-image: url("/assets/images/Icon_HappinessLab.png");
+  background-image: url("../assets/images/Icon_HappinessLab.png");
 }
 .profile .tab-image {
-  background-image: url("/assets/images/Icon_Profile.png");
+  background-image: url("../assets/images/Icon_Profile.png");
 }
 .upgrade .tab-image {
-  background-image: url("/assets/images/Icon_Upgrade.png");
+  background-image: url("../assets/images/Icon_Upgrade.png");
 }
 .contact .tab-image {
-  background-image: url("/assets/images/Icon_Help.png");
+  background-image: url("../assets/images/Icon_Help.png");
 }
 .community .tab-image {
-  background-image: url("/assets/images/Icon_Community.png");
+  background-image: url("../assets/images/Icon_Community.png");
 }
 .active-tab {
   .happiness-lab .tab-image {
-    background-image: url("/assets/images/Icon_HappinessLab_Hover.png");
+    background-image: url("../assets/images/Icon_HappinessLab_Hover.png");
   }
   .profile .tab-image {
-    background-image: url("/assets/images/Icon_Profile_Hover.png");
+    background-image: url("../assets/images/Icon_Profile_Hover.png");
   }
   .upgrade .tab-image {
-    background-image: url("/assets/images/Icon_Upgrade_Hover.png");
+    background-image: url("../assets/images/Icon_Upgrade_Hover.png");
   }
   .contact .tab-image {
-    background-image: url("/assets/images/Icon_Help_Hover.png");
+    background-image: url("../assets/images/Icon_Help_Hover.png");
   }
   .community .tab-image {
-    background-image: url("/assets/images/Icon_Community_Hover.png");
+    background-image: url("../assets/images/Icon_Community_Hover.png");
   }
 }
 .tab-image {
