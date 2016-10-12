@@ -2,7 +2,7 @@
   <div class="hidden-xs hidden-sm">
     <div class="top-bar">
       <div class="indicator">
-        <activity-indicator />
+        <activity-indicator todo="dashboard.to_do" completed="dashboard.completed" />
       </div>
       <div class="mindfulness">
         <activity-tile step="0"/>
@@ -24,7 +24,7 @@
   </div>
 
   <div class="visible-xs-block visible-sm-block">
-    <activity-indicator />
+    <activity-indicator  todo="dashboard.to_do" completed="dashboard.completed" />
     <div class="hidden-xs">
       <slick arrows=false dots=true infinite=false speed=300 slides-to-show=2 slides-to-scroll=1>
         <activity-tile step="0" />
