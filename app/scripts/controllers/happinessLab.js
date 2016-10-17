@@ -18,10 +18,10 @@ angular.module('mindInsuranceApp')
     // scope variables end
 
 
-    for (var i = 1; i <= 4; i++) {
+    for (var i = 1; i <= 5; i++) {
       vm.activityTiles.push({step: i})
-    }    
- 	
+    }
+
  	  // Get dashboard object, which include user assestment progress information.
 	  RestService.getUserDashboard().then(function(response) {
           $scope.dashboard = response;

@@ -1,0 +1,148 @@
+@import '../variables.scss';
+
+.goal-insights-modal {
+  padding: $padding;
+  height: 100%;
+  color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+
+  .step {
+    color: $brown;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  .title {
+    color: $dark-blue;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  .goal-tab-box {
+    display: flex;
+    margin: 5px 0 15px;
+
+    .goal-tab-1 {
+      flex: 210;
+    }
+    .goal-tab-2 {
+      flex: 245;
+      border-left: solid 1px $brown;
+      border-right: solid 1px $brown;
+    }
+    .goal-tab-3 {
+      flex: 180;
+    }
+    .goal-tab {
+      background-color: $gray;
+      color: $brown;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      &.active {
+        background-color: $dark-blue;
+        color: white;
+      }
+    }
+  }
+  .section-tab-box {
+    display: flex;
+    margin-bottom: 10px;
+
+    .section-tab {
+      flex: 1;
+      text-align: center;
+      border-bottom: solid 4px $gray;
+      padding: 5px;
+      @include normal-font;
+      font-weight: 600;
+      &.active {
+        border-bottom-color: $dark-blue;
+      }
+    }
+  }
+  .save-button-box {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .scroll-box {
+    overflow-y: auto;
+    flex: 1;
+  }
+  .section-1, .section-2, .section-3 {
+    @include normal-font;
+  }
+  .question {
+    font-size: 22px;
+    .question-no {
+      font-weight: 400;
+    }
+    .question-desc {
+      font-weight: 200;
+    }
+  }
+
+  @media only screen and (max-width: $mobileEnd) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .goal-tab-box {
+      margin-left: -$padding;
+      margin-right: -$padding;
+    }
+    .section-tab-box {
+      margin-left: -$padding;
+      margin-right: -$padding;
+    }
+    .btn-save {
+      width: 60px;
+      height: 32px;
+    }
+    .section-title-box {
+      margin: 5px 0 7px;
+      font-size: 30px;
+      .section-no {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $tabletStart) {
+    .step, .title {
+      display: inline;
+    }
+    .goal-tab {
+      font-size: 30px !important;
+    }
+    .section-tab-box {
+      display: none;
+    }
+    .btn-save {
+      width: 139px;
+      height: 43px;
+    }
+    .section-title-box {
+      margin-bottom: 5px;
+      font-size: 35px;
+    }
+  }
+
+  @media only screen and (min-width: $desktopStart) {
+    padding: 2*$padding 6*$padding;
+
+    .content-wrapper {
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
+}

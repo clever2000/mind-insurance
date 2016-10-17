@@ -1,0 +1,27 @@
+@import '../variables.scss';
+
+.limited-textarea {
+  position: relative;
+  width: 100%;
+  margin: 5px 0 15px;
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 15px;
+    background-color: $gray;
+    color: $dark-blue;
+    @include normal-font;
+    resize: none;
+  }
+  .max-label {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  @media only screen and (max-width: $mobileEnd) {    
+  }
+  @media only screen and (min-width: $tabletStart) {
+  }
+}

@@ -1,0 +1,49 @@
+<div class="goal-insights-modal">
+  <div class="close-box">
+    <button class="btn-close highlight-blue" type="button" ng-click="$ctrl.close()">&times;</button>
+  </div>
+  <div ng-if="$ctrl.intro" ng-include="'views/partials/intro.html'">
+  </div>
+  <div ng-if="!$ctrl.intro" class="content-wrapper">
+    <div class="title-box">
+      <div class="step">Step {{$ctrl.step}}</div>
+      <div class="title">{{$ctrl.title}}</div>
+    </div>
+    <div class="goal-tab-box">
+      <div class="goal-tab goal-tab-1 active">Personal</div>
+      <div class="goal-tab goal-tab-2">Professional</div>
+      <div class="goal-tab goal-tab-3">Videos</div>
+    </div>
+    <div class="section-tab-box">
+      <div class="section-tab active">Section 1</div>
+      <div class="section-tab">Section 2</div>
+      <div class="section-tab">Section 3</div>
+    </div>
+    <div class="save-button-box">
+      <button class="btn-blue highlight-blue btn-save" ng-click="$ctrl.save()">Save</button>
+    </div>
+    <div class="scroll-box">
+      <div class="section-1" ng-show="!$ctrl.isPhone || $ctrl.section==1">
+        <div class="section-title-box">
+          <span class="section-no">Section 1: </span>
+          <span class="section-title">My Personal Goal</span>
+        </div>
+        <div class="section-description">
+          Write down one personal goal you would like to achieve in the next 6-12 months
+        </div>
+        <limited-textarea max-word="25" ng-model="$ctrl.personal.goal" />
+        <div class="question">
+          <span class="question-no">1. </span>
+          <span class="question-desc">To what degree am I motivated toward this goal?</span>
+        </div>
+      </div>
+      <div class="section-2" ng-show="!$ctrl.isPhone || $ctrl.section==2">
+
+        Section2
+      </div>
+      <div class="section-3" ng-show="!$ctrl.isPhone || $ctrl.section==3">
+        Section3
+      </div>
+    </div>
+  </div>
+</div>

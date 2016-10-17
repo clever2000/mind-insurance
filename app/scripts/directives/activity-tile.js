@@ -80,6 +80,9 @@ angular.module('mindInsuranceApp')
             Object.assign(vm, {
               count: 0,
               stepTitle: 'My Goals Insights & Actions',
+              button1: {
+                label: "Begin"
+              },
               button2: {
                 label: "View PDF"
               }
@@ -152,6 +155,20 @@ angular.module('mindInsuranceApp')
                 animation: true,
                 templateUrl: 'views/modals/positive-goal.html',
                 controller: 'ModalPositiveGoalCtrl',
+                controllerAs: '$ctrl',
+                windowClass: 'modal-background',
+                resolve: {
+                  step: vm.step
+                }
+              });
+            }
+            break;
+          case 5:
+            vm.button1.onClick = function() {
+              $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modals/goal-insights.html',
+                controller: 'ModalGoalInsightsCtrl',
                 controllerAs: '$ctrl',
                 windowClass: 'modal-background',
                 resolve: {
