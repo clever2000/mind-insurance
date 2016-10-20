@@ -1,0 +1,42 @@
+<div class="upgrade">
+  <div class="hidden-xs">
+    <div class="tablet-box">
+      <table>
+        <thead>
+          <tr>
+            <th>Features</th>
+            <th><div>Happy</div><div class="bottom-line">FREE</div></th>
+            <th><div>Happier</div><div class="bottom-line">$55 per month</div></th>
+            <th><div>Happier Premium</div><div class="bottom-line">$82.50 per month</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="feature in vm.features track by $index">
+            <td>
+              <div class="top-line">{{feature.name}}</div>
+              <div class="bottom-line">{{feature.description}}</div>
+            </td>
+            <td><div ng-class="{tick:feature.free, dash:!feature.free}"/></td>
+            <td><div ng-class="{tick:feature.paid, dash:!feature.paid}"/></td>
+            <td><div ng-class="{tick:feature.premium, dash:!feature.premium}"/></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td><button class="btn-brown highlight-green">Register Me</button></td>
+            <td><button class="btn-brown highlight-green">Register Me</button></td>
+            <td><button class="btn-brown highlight-green">Register Me</button></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="footer">
+        Prices include GST, 5% discount for annual payment, 10% discount on annual renewal.
+      </div>
+    </div>
+  </div>
+  <div class="visible-xs">
+    <div class="mobile-box">
+    </div>
+  </div>
+</div>

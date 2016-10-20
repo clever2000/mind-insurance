@@ -28,6 +28,11 @@ $tile-step3: rgb(6, 35, 69);
 $tile-step4: rgb(230, 126, 34);
 $tile-step5: rgb(230, 126, 34);
 
+$upgrade-feature: rgb(100, 191, 180);
+$upgrade-happy: rgb(111, 198, 109);
+$upgrade-happier: rgb(230, 126, 34);
+$upgrade-happier-premium: rgb(6, 35, 69);
+
 @mixin v-align-container {
   display: flex;
   flex-direction: column;
