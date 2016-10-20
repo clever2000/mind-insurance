@@ -1,1 +1,90 @@
 @import './variables.scss';
+
+.profile {
+  .content-box {
+    background-color: $gray;
+  }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    color: $green;
+    margin: 1rem 0;
+  }
+  .divider {
+    height: 2px;
+    background-color: #d6d5d3;
+    border-bottom: solid 1px white;
+  }
+  .medium-font {
+    margin: 0.3rem 0 0.8rem;
+  }
+
+  @media only screen and (max-width: $mobileEnd) {
+    .content-box {
+      padding: $padding;
+    }
+    .large-font {
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .medium-font {
+      font-size: 20px;
+      @include normal-font;
+    }
+    .small-font {
+      font-size: 14px;
+      @include normal-font;
+    }
+    button {
+      width: 59px;
+      height: 38px;
+    }
+  }
+
+  @media only screen and (min-width: $tabletStart){
+    padding: $padding 1.5*$padding;
+
+    .content-box {
+      padding: $padding 1.5*$padding;
+    }
+    .border-box {
+      border: solid 1px $green;
+      padding: $padding 1.5*$padding;
+    }
+    .large-font {
+      font-size: 32px;
+    }
+    .medium-font {
+      font-size: 20px;
+      @include normal-font;
+      display: inline-block;
+    }
+    .small-font {
+      font-size: 16px;
+      @include normal-font;
+      display: inline-block;
+      text-align: right;
+      margin-right: 10px;
+      width: 80px;
+    }
+  }
+
+  @media only screen and (min-width: $desktopStart){
+    .large-font {
+      font-size: 36px;
+    }
+    .medium-font {
+      font-size: 24px;
+      @include normal-font;
+      display: inline-block;
+    }
+    .small-font {
+      font-size: 18px;
+      @include normal-font;
+      display: inline-block;
+      text-align: right;
+      margin-right: 20px;
+      width: 180px;
+    }
+  }
+}

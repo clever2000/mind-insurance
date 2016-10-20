@@ -8,35 +8,24 @@
  * Controller of the mindInsuranceApp
  */
 angular.module('mindInsuranceApp')
-  .controller('ModalAssessmentCtrl', function($uibModalInstance, $uibModal,RestService,  detectDevice, step, assessment) {
+  .controller('ModalAssessmentCtrl', function($uibModalInstance, $uibModal,RestService,  detectDevice, step) {
     var $ctrl = this;
     $ctrl.intro = false; // in mobile phone, an intro modal shows up before start activity
 
     $ctrl.step = step;
     $ctrl.questionIndex = 0;
-    $ctrl.questions = assessment.questions.map(function(a) {
-      return a.name;
-    });
+    $ctrl.questions = [];
     $ctrl.responses = [];
     $ctrl.nextLabel = 'Next';
 
-    Object.assign($ctrl, {
-      title: assessment.name,
-      direction: assessment.description,
-      nQuestions: assessment.questions.length,
-      responseSelectors: assessment.questions[0].anwsers.map(function(a) {
-        return a.name;
-      })
-    });
 
-    /*
             for (var i = 0; i < $ctrl.nQuestions; i++) {
               $ctrl.questions.push('If I could live my life over, I would change almost nothing.');
               $ctrl.responses.push(0);
-            }*/
+            }
 
 
-    /*    switch (step) {
+        switch (step) {
           case 1:
             Object.assign($ctrl, {
               title: 'Subjective Wellbeing Assessment',
@@ -66,7 +55,7 @@ angular.module('mindInsuranceApp')
 
           default:
             break;
-        }*/
+        }
 
     if (detectDevice.isPhone()) {
       $ctrl.intro = true;

@@ -69,6 +69,10 @@ button {
   font-size: 17px;
   text-align: center;
 }
+button:disabled {
+  border: solid 1px #a8a9ab !important;
+  color: #a8a9ab !important;
+}
 .btn-white {
   border: solid 1px white;
   color: white;
@@ -88,6 +92,11 @@ button {
 }
 .highlight-gray:not(:disabled):hover {
   background-color: $dark-gray;
+  border: solid 1px white;
+  color: white;
+}
+.highlight-green:not(:disabled):hover {
+  background-color: $green;
   border: solid 1px white;
   color: white;
 }

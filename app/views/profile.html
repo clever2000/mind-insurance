@@ -1,0 +1,76 @@
+<div class="profile">
+  <div class="content-box">
+    <div class="border-box">
+      <div class="my-details">
+        <div class="section-header">
+          <span class="large-font">My Details</span>
+          <button class="btn-brown highlight-green" ng-click="vm.editProfileButton.onClick()">{{vm.editProfileButton.label}}</button>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-offset-2 col-sm-4 col-md-offset-1">
+            <div class="small-font">First Name</div>
+            <div class="medium-font">{{vm.person.firstName}}</div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="small-font">Last Name</div>
+            <div class="medium-font">{{vm.person.lastName}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" />
+
+      <div class="my-address">
+        <div class="section-header">
+          <span class="large-font">My Address</span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="small-font">Street</div>
+            <div class="medium-font">{{vm.person.street}}</div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="small-font">Suburb</div>
+            <div class="medium-font">{{vm.person.suburb}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="small-font">Postcode</div>
+            <div class="medium-font">{{vm.person.postcode}}</div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="small-font">State</div>
+            <div class="medium-font">{{vm.person.state}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="small-font">Country</div>
+            <div class="medium-font">{{vm.person.country}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" />
+
+      <div class="my-login-details">
+        <div class="section-header">
+          <span class="large-font">My Login Details</span>
+          <button class="btn-brown highlight-green" ng-click="vm.changeButton.onClick()">{{vm.changeButton.label}}</button>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-7">
+            <div class="small-font">Username</div>
+            <div class="medium-font">{{vm.person.username}}</div>
+          </div>
+          <div class="col-xs-12 col-sm-5">
+            <div class="small-font">Password</div>
+            <div class="medium-font">{{vm.person.password}}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

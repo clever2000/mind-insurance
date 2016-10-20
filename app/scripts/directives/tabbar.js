@@ -16,14 +16,14 @@ angular.module('mindInsuranceApp')
         viewport: '@'
       },
       link: function (scope, element, attrs) {
-        scope.uiStates = ['main.happinessLab', 'main.profile', 'main.upgrade', 'main.contact', 'main.community'];
-        scope.classNames= ['happiness-lab', 'profile', 'upgrade', 'contact', 'community'];
+        scope.uiStates = ['main.happinessLab', 'main.profile', 'main.upgrade', 'main.help', 'main.community'];
+        scope.classNames= ['happiness-lab', 'profile', 'upgrade', 'help', 'community'];
 
         if (scope.viewport === 'xs') {
-          scope.tabLabels = ['Happiness Lab', 'Profile', 'Upgrade', 'Contact Us', 'Community'];
+          scope.tabLabels = ['Happiness Lab', 'Profile', 'Upgrade', 'Help Us', 'Community'];
         }
         else {
-          scope.tabLabels = ['My Happiness Lab', 'My Profile', 'Upgrade', 'Contact Us', 'Community'];
+          scope.tabLabels = ['My Happiness Lab', 'My Profile', 'Upgrade', 'Help Us', 'Community'];
         }
       }
     };
