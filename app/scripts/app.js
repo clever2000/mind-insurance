@@ -16,8 +16,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'ui.router',
-    'slick'
+    'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
