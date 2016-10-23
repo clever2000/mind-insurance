@@ -47,6 +47,9 @@
   height: 100%;
   background-color: transparent;
 }
+.modal-open .modal {
+  overflow-y: hidden;
+}
 
 /* Styles */
 
@@ -162,14 +165,14 @@ button:disabled {
     font-size: $mobileBaseSize;
   }
   .bottom-area {
-    flex: 1;
+    @include rest-space;
     @include display-flex;
     flex-direction: column;
     .tab-bar-area {
       overflow-x: auto;
     }
     .content-area {
-      flex: 1;
+      @include rest-space;
       overflow-y: auto;
     }
   }
@@ -180,7 +183,7 @@ button:disabled {
     font-size: $tabletBaseSize;
   }
   .bottom-area {
-    flex: 1;
+    @include rest-space;
     overflow: hidden;
     position: relative;
 

@@ -49,6 +49,7 @@
     margin-bottom: 20px;
   }
   .answer-box {
+    @include rest-space;
     .hexagon-wrapper:nth-last-child(2) .line {
       visibility: hidden;
     }
@@ -94,6 +95,7 @@
       font-size: 20px;
     }
     .content-wrapper {
+      @include rest-space;
       display: flex;
       flex-direction: column;
 

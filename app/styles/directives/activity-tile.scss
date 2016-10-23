@@ -52,7 +52,7 @@
     font-weight: 300;
   }
   .button-container {
-    flex: 1;
+    @include rest-space;
     display: flex;
     align-items: flex-end;
 
