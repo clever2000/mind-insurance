@@ -1,0 +1,60 @@
+@import '../variables.scss';
+
+.upgrade-card {
+  background-color: $gray;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 1px gray;
+  
+  .upgrade-header {
+    height: 85px;
+    padding: 7px 15px 0;
+    @include display-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    .package-name {
+      font-size: 30px;
+    }
+    .package-pricing {
+      text-align: right;
+      .top-line {
+        font-size: 30px;
+      }
+      .bottom-line {
+        font-size: 20px;
+      }
+    }
+  }
+  .upgrade-body {
+    padding: 15px;
+    @include normal-font;
+    font-size: 15px;
+
+    .feature-name {
+      margin-top: 20px;
+      font-weight: 700;
+    }
+    .feature-description {
+      font-size: 14px;
+    }
+  }
+  .upgrade-footer {
+    padding-bottom: 25px;
+
+    button {
+      display: block;
+      margin: auto;
+      margin-top: 10px;
+    }
+  }
+}
+.upgrade-card:nth-child(1) .upgrade-header {
+  background-color: $upgrade-happy;
+}
+.upgrade-card:nth-child(2) .upgrade-header {
+  background-color: $upgrade-happier;
+}
+.upgrade-card:nth-child(3) .upgrade-header {
+  background-color: $upgrade-happier-premium;
+}

@@ -5,9 +5,10 @@
         <thead>
           <tr>
             <th>Features</th>
-            <th><div>Happy</div><div class="bottom-line">FREE</div></th>
-            <th><div>Happier</div><div class="bottom-line">$55 per month</div></th>
-            <th><div>Happier Premium</div><div class="bottom-line">$82.50 per month</div></th>
+            <th ng-repeat="package in vm.packages">
+              <div>{{package.name}}</div>
+              <div class="bottom-line">{{package.pricing=='0'?'FREE':'$'+package.pricing+' per month'}}</div>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -16,17 +17,17 @@
               <div class="top-line">{{feature.name}}</div>
               <div class="bottom-line">{{feature.description}}</div>
             </td>
-            <td><div ng-class="{tick:feature.free, dash:!feature.free}"/></td>
-            <td><div ng-class="{tick:feature.paid, dash:!feature.paid}"/></td>
-            <td><div ng-class="{tick:feature.premium, dash:!feature.premium}"/></td>
+            <td ng-repeat="package in vm.packages">
+              <div ng-class="{tick:package.features.indexOf(feature.id)>=0, dash:package.features.indexOf(feature.id)<0}"/>
+            </td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <td></td>
-            <td><button class="btn-brown highlight-green">Register Me</button></td>
-            <td><button class="btn-brown highlight-green">Register Me</button></td>
-            <td><button class="btn-brown highlight-green">Register Me</button></td>
+            <td ng-repeat="package in vm.packages">
+              <button class="btn-brown highlight-green">Register Me</button>
+            </td>
           </tr>
         </tfoot>
       </table>
@@ -37,6 +38,7 @@
   </div>
   <div class="visible-xs">
     <div class="mobile-box">
+      <upgrade-card ng-repeat="package in vm.packages" package="package" />      
     </div>
   </div>
 </div>

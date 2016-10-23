@@ -1,0 +1,28 @@
+<div class="upgrade-card" ng-class="'package-'+$ctrl.package.id">
+  <div class="upgrade-header">
+    <div class="package-name">{{$ctrl.package.name}}</div>
+    <div class="package-pricing">
+      <div class="top-line">{{$ctrl.package.pricing=='0'?'FREE':'$'+$ctrl.package.pricing}}</div>
+      <div class="bottom-line" ng-if="$ctrl.package.pricing!='0'">per month</div>
+    </div>
+  </div>
+  <div class="upgrade-body">
+    <div class="upgrade-description">
+      {{$ctrl.package.description}}
+    </div>
+    <div class="upgrade-detail collapse">
+      <div ng-repeat="feature in $ctrl.features">
+        <div class="feature-name">
+          {{feature.name}}
+        </div>
+        <div class="feature-description">
+          {{feature.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="upgrade-footer">
+    <button class="btn-brown highlight-green" ng-show="$ctrl.expanded">Upgrade</button>
+    <button class="btn-brown highlight-green" data-toggle="collapse" data-target=".package-{{$ctrl.package.id}} .upgrade-detail" ng-click="$ctrl.toggleDetails()">{{$ctrl.expanded?'Close':'View Details'}}</button>
+  </div>
+</div>
