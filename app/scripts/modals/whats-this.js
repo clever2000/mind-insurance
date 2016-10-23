@@ -15,7 +15,7 @@ angular.module('mindInsuranceApp')
 
     switch (step) {
       case 1:
-        Object.assign($ctrl, {
+        _.assign($ctrl, {
           title1: 'What is',
           title2: 'Values Assessment?',
           direction: 'The Values Assessment, is a tool to help you gain insight into your current avlues hierarchy and the motivations behind your values. \
@@ -23,14 +23,14 @@ angular.module('mindInsuranceApp')
         });
         break;
       case 3:
-        Object.assign($ctrl, {
+        _.assign($ctrl, {
           title1: 'What is',
           title2: 'Goal Insights And Actions?',
           direction: 'The Goals Insight and Actions is ',
         });
         break;
       case 4:
-        Object.assign($ctrl, {
+        _.assign($ctrl, {
           title1: 'What is',
           title2: 'Values Insights And Actions?',
           direction: 'The Values Insight and Actions is lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei- is a tool to help you gain insight into your current avlues hierarchy and the motivations behind your values. \

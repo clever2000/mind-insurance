@@ -20,7 +20,7 @@ angular.module('mindInsuranceApp')
         var vm = this;
         switch (vm.step) {
           case 0:
-            Object.assign(vm, {
+            _.assign(vm, {
               count: 12,
               stepTitle: 'My Daily Mindfulness Practice',
               button1: {
@@ -32,7 +32,7 @@ angular.module('mindInsuranceApp')
             })
             break;
           case 1:
-            Object.assign(vm, {
+            _.assign(vm, {
               count: 0,
               stepTitle: 'My SWB Score',
               button1: {
@@ -44,7 +44,7 @@ angular.module('mindInsuranceApp')
             })
             break;
           case 2:
-            Object.assign(vm, {
+            _.assign(vm, {
               count: 0,
               stepTitle: 'My Values Results',
               button1: {
@@ -56,7 +56,7 @@ angular.module('mindInsuranceApp')
             })
             break;
           case 3:
-            Object.assign(vm, {
+            _.assign(vm, {
               count: 0,
               stepTitle: 'My Values Insights & Actions',
               button2: {
@@ -65,7 +65,7 @@ angular.module('mindInsuranceApp')
             })
             break;
           case 4:
-            Object.assign(vm, {
+            _.assign(vm, {
               count: 0,
               stepTitle: 'Positive Goal Setting, Theory & Science',
               button1: {
@@ -77,7 +77,7 @@ angular.module('mindInsuranceApp')
             })
             break;
           case 5:
-            Object.assign(vm, {
+            _.assign(vm, {
               count: 0,
               stepTitle: 'My Goals Insights & Actions',
               button1: {
@@ -92,7 +92,7 @@ angular.module('mindInsuranceApp')
             break;
         }
 
-        Object.assign(vm, {
+        _.assign(vm, {
           bgImageUrl: 'assets/images/tile_icon_' + vm.step + '.png'
         });
 

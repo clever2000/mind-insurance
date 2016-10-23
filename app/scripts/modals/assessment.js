@@ -27,7 +27,7 @@ angular.module('mindInsuranceApp')
 
         switch (step) {
           case 1:
-            Object.assign($ctrl, {
+            _.assign($ctrl, {
               title: 'Subjective Wellbeing Assessment',
               direction: 'On the following screens are five statements that you may agree or disagree with. Select the option that most meets your agreement. Please be open and honest in your responding.',
               nQuestions: 5,
@@ -40,7 +40,7 @@ angular.module('mindInsuranceApp')
             break;
 
           case 2:
-            Object.assign($ctrl, {
+            _.assign($ctrl, {
               title: 'Values Assessment',
               direction: 'Below are a series of statements. Please read each statement carefully and think about how much each statement is or is not like you. Select a response that represents how much the statement is like you.',
               nQuestions: 21,
@@ -59,7 +59,7 @@ angular.module('mindInsuranceApp')
 
     if (detectDevice.isPhone()) {
       $ctrl.intro = true;
-      Object.assign($ctrl, {
+      _.assign($ctrl, {
         title1: 'Step ' + step,
         title2: $ctrl.title,
         beginLabel: 'Continue'

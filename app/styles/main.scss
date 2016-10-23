@@ -108,14 +108,14 @@ button:disabled {
   @include v-align-container;
 }
 .display-flex {
-  display: flex;
+  @include display-flex;
 }
 
 .app {
   position: fixed;
   width: 100%;
   height: 100%;
-  display: flex;
+  @include display-flex;
   flex-direction: column;
 }
 .pattern-background {
@@ -142,7 +142,7 @@ button:disabled {
   visibility: hidden;
 }
 .close-box {
-  display: flex;
+  @include display-flex;
   flex-direction: row-reverse;
   margin-bottom: 15px;
 
@@ -163,7 +163,7 @@ button:disabled {
   }
   .bottom-area {
     flex: 1;
-    display: flex;
+    @include display-flex;
     flex-direction: column;
     .tab-bar-area {
       overflow-x: auto;

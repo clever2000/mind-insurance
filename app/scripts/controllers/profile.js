@@ -39,7 +39,7 @@ angular.module('mindInsuranceApp')
 
     }
 
-    Object.assign(vm, {
+    _.assign(vm, {
       person: person
     })
   });

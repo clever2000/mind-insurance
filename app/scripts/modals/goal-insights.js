@@ -14,7 +14,7 @@ angular.module('mindInsuranceApp')
 
     $ctrl.step = step;
 
-    Object.assign($ctrl, {
+    _.assign($ctrl, {
       title: 'Goal Insights And Actions',
       direction: 'Lorem ipsum dolor sit amet, consectetur adipiscing eilt, sed do eisumod tempor incididunt ut labore et dolore magna aliqua.',
       isPhone: detectDevice.isPhone(),
@@ -27,7 +27,7 @@ angular.module('mindInsuranceApp')
 
     if ($ctrl.isPhone) {
       $ctrl.intro = true;
-      Object.assign($ctrl, {
+      _.assign($ctrl, {
         title1: 'Step ' + step,
         title2: $ctrl.title,
         beginLabel: 'Continue'

@@ -20,10 +20,10 @@ angular.module('mindInsuranceApp')
         scope.classNames= ['happiness-lab', 'profile', 'upgrade', 'help', 'community'];
 
         if (scope.viewport === 'xs') {
-          scope.tabLabels = ['Happiness Lab', 'Profile', 'Upgrade', 'Help Us', 'Community'];
+          scope.tabLabels = ['Happiness Lab', 'Profile', 'Upgrade', 'Help', 'Community'];
         }
         else {
-          scope.tabLabels = ['My Happiness Lab', 'My Profile', 'Upgrade', 'Help Us', 'Community'];
+          scope.tabLabels = ['My Happiness Lab', 'My Profile', 'Upgrade', 'Help', 'Community'];
         }
       }
     };

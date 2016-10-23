@@ -34,12 +34,20 @@ $upgrade-happier: rgb(230, 126, 34);
 $upgrade-happier-premium: rgb(6, 35, 69);
 
 @mixin v-align-container {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 @mixin h-align-container {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -47,4 +55,13 @@ $upgrade-happier-premium: rgb(6, 35, 69);
 }
 @mixin normal-font {
   font-family: 'helvetica';
+}
+@mixin display-flex {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: flex;
+  min-width: 1px;
+  min-height: 1px;
 }

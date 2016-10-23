@@ -31,7 +31,7 @@ angular.module('mindInsuranceApp')
           currentAssessment = Array.prototype.slice.call($scope.todo, 0)[0];
           step = $scope.completed.length + 1;
 
-          Object.assign(vm, {
+          _.assign(vm, {
             step: step,
             stepTitle: currentAssessment.name,
             detail: currentAssessment.description,
