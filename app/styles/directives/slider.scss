@@ -1,0 +1,44 @@
+@import '../variables.scss';
+
+.slider {
+  //angular-slider customization
+  .rz-bar {
+    background-color: $brown;
+  }
+  .rz-pointer {
+    border: 1px solid $brown;
+    background-color: white;
+    &:after {
+      display: none;
+    }
+  }
+
+  position: relative;
+
+  @media only screen and (max-width: $mobileEnd) {
+    .floor-label, .ceil-label {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: $tabletStart) {
+    .rz-limit {
+      display: none;
+    }
+    .slider-wrapper {
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+    .floor-label {
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+      top: 25px;
+    }
+    .ceil-label {
+      font-size: 20px;
+      position: absolute;
+      right: 0;
+      top: 25px;
+    }
+  }
+}

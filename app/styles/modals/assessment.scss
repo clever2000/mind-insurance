@@ -50,21 +50,7 @@
   }
   .answer-box {
     @include rest-space;
-    .hexagon-wrapper:nth-last-child(2) .line {
-      visibility: hidden;
-    }
-    .leftmost-answer, .rightmost-answer {
-      line-height: 40px;        // same as hexagon-wrapper font-size
-      vertical-align: top;
-      font-size: 16px;
-      @include normal-font;
-    }
-    .leftmost-answer {
-      margin-right: 15px;
-    }
-    .rightmost-answer {
-      margin-left: -20px;      // last hexagon answer's line is hidden and takes up space
-    }
+
     .btn-next {
       margin-top: 30px;
     }
@@ -101,9 +87,7 @@
 
       .answer-box {
         overflow-y: auto;
-        .leftmost-answer, .rightmost-answer {
-          display: none;
-        }
+
         .btn-next {
           margin-top: 15px;
           margin-left: 50%;

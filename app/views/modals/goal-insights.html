@@ -15,34 +15,106 @@
       <div class="goal-tab goal-tab-3">Videos</div>
     </div>
     <div class="section-tab-box">
-      <div class="section-tab active">Section 1</div>
-      <div class="section-tab">Section 2</div>
-      <div class="section-tab">Section 3</div>
+      <div class="section-tab" ng-class="{active: $ctrl.section==1}">Section 1</div>
+      <div class="section-tab" ng-class="{active: $ctrl.section==2}">Section 2</div>
+      <div class="section-tab" ng-class="{active: $ctrl.section==3}">Section 3</div>
     </div>
     <div class="save-button-box">
       <button class="btn-blue highlight-blue btn-save" ng-click="$ctrl.save()">Save</button>
     </div>
     <div class="scroll-box">
-      <div class="section-1" ng-show="!$ctrl.isPhone || $ctrl.section==1">
+      <div class="section-1" ng-if="!$ctrl.isPhone || $ctrl.section==1">
         <div class="section-title-box">
           <span class="section-no">Section 1: </span>
           <span class="section-title">My Personal Goal</span>
         </div>
-        <div class="section-description">
-          Write down one personal goal you would like to achieve in the next 6-12 months
+        <div class="question">
+          <div class="question-desc">Write down one personal goal you would like to achieve in the next 6-12 months</div>
+          <limited-textarea max-word="25" ng-model="$ctrl.personal.section1.goal" />
         </div>
-        <limited-textarea max-word="25" ng-model="$ctrl.personal.goal" />
         <div class="question">
           <span class="question-no">1. </span>
           <span class="question-desc">To what degree am I motivated toward this goal?</span>
+          <response-selector response-selectors="$ctrl.responseSelectors" ng-model="$ctrl.personal.section1.motivationDegree" />
+        </div>
+        <div class="question">
+          <span class="question-no">2. </span>
+          <span class="question-desc">Why am I persuing this goal?</span>
+          <limited-textarea max-word="25" ng-model="$ctrl.personal.section1.why" />
+        </div>
+        <div class="question">
+          <span class="question-no">3. </span>
+          <span class="question-desc">How will I achieve this goal?</span>
+          <limited-textarea max-word="50" ng-model="$ctrl.personal.section1.how" />
         </div>
       </div>
-      <div class="section-2" ng-show="!$ctrl.isPhone || $ctrl.section==2">
-
-        Section2
+      <div class="section-2" ng-if="!$ctrl.isPhone || $ctrl.section==2">
+        <div class="section-title-box">
+          <span class="section-no">Section 2: </span>
+          <span class="section-title">Evaluating the motivation framework of my Person</span>
+        </div>
+        <div class="question">
+          <div class="question-detail">Instructions: Slide the circle on the continuum where it represents how strongly the goal is connected to each motivation.</div>
+        </div>
+        <div class="question">
+          <span class="question-no">1. </span>
+          <span class="question-desc">Intrinsic Motivation</span>
+          <div class="question-detail">The desire to do something just for the experience itself.</div>
+          <slider slider-model="$ctrl.personal.section2.intrinsicMotivation" slider-options="$ctrl.personal.section2.intrinsicOptions" />
+        </div>
+        <div class="question">
+          <span class="question-no">2. </span>
+          <span class="question-desc">Identified Motivation</span>
+          <div class="question-detail">Required to do but internalising into a sense of self, seeing the value and doing it with personal volition</div>
+          <slider slider-model="$ctrl.personal.section2.identifiedMotivation" slider-options="$ctrl.personal.section2.identifiedOptions" />
+        </div>
+        <div class="question">
+          <span class="question-no">3. </span>
+          <span class="question-desc">External Motivation</span>
+          <div class="question-detail">Activities we are forced to, we see little value in and are not fun</div>
+          <slider slider-model="$ctrl.personal.section2.externalMotivation" slider-options="$ctrl.personal.section2.externalOptions" />
+        </div>
+        <div class="question">
+          <span class="question-no">4. </span>
+          <span class="question-desc">Introjected Motivation</span>
+          <div class="question-detail">You are the forcer, guilt tripper, pusher</div>
+          <slider slider-model="$ctrl.personal.section2.introjectedMotivation" slider-options="$ctrl.personal.section2.introjectedOptions" />
+        </div>
+        <div class="question">
+          <span class="question-desc">Actions</span>
+          <div class="question-detail">What actions could you take to make the intrinsic and identified motivations stronger?</div>
+          <limited-textarea max-word="25" ng-model="$ctrl.personal.section2.action1" />
+          <div class="question-detail">What actions could you take to make the external and introjected motivations weaker?</div>
+          <limited-textarea max-word="25" ng-model="$ctrl.personal.section2.action2" />
+        </div>
       </div>
-      <div class="section-3" ng-show="!$ctrl.isPhone || $ctrl.section==3">
-        Section3
+      <div class="section-3" ng-if="!$ctrl.isPhone || $ctrl.section==3">
+        <div class="section-title-box">
+          <span class="section-no">Section 3: </span>
+          <span class="section-title">Evaluating the approach/Avoid framework of my Personal Goal</span>
+        </div>
+        <div class="question">
+          <div class="question-detail">Instructions: Slide the circle on the continuum where it representing the main reason for pursuing this goal</div>
+          <slider slider-model="$ctrl.personal.section3.mainReason" slider-options="$ctrl.personal.section3.mainReasonOptions" />
+        </div>
+        <div class="question">
+          <span class="question-desc">Actions:</span>
+          <div class="question-detail">What are all of the desirable outcomes you can think of for pursuing this goal?</div>
+          <limited-textarea max-word="25" ng-model="$ctrl.personal.section3.action1" />
+          <div class="question-detail">What will help me stay focused on these outcomes?</div>
+          <limited-textarea max-word="25" ng-model="$ctrl.personal.section3.action2" />
+        </div>
+      </div>
+      <div class="footer">
+        <button class="hidden-xs btn-blue highlight-blue">Continue to Professional</button>
+        <button
+          class="visible-xs-block btn-blue highlight-blue first"
+          ng-if="$ctrl.section!=1"
+          ng-click="$ctrl.prevButton.onClick()">{{$ctrl.prevButton.label}}</button>
+        <button
+          class="visible-xs-block btn-blue highlight-blue"
+          ng-click="$ctrl.nextButton.onClick()"
+          ng-class="'a'+$ctrl.section">{{$ctrl.nextButton.label}}</button>
       </div>
     </div>
   </div>

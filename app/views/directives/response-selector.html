@@ -1,0 +1,5 @@
+<div class="response-selector">
+  <span class="leftmost-answer">{{$ctrl.responseSelectors[0]}}</span>
+  <hexagon ng-repeat="r in $ctrl.responseSelectors track by $index" type="radio" ng-model="$ctrl.ngModel" ng-value="{key:$index+1,value:r}" />
+  <span class="rightmost-answer">{{$ctrl.responseSelectors[$ctrl.responseSelectors.length-1]}}</span>
+</div>

@@ -2,11 +2,17 @@
 
 .goal-insights-modal {
   padding: $padding;
+  width: 100%;
   height: 100%;
   color: $dark-blue;
-  display: flex;
+  @include display-flex;
   flex-direction: column;
 
+  .content-wrapper {
+    @include rest-space;
+    @include display-flex;
+    flex-direction: column;
+  }
   .step {
     color: $brown;
     font-size: 2.5rem;
@@ -19,7 +25,7 @@
     font-weight: 300;
   }
   .goal-tab-box {
-    display: flex;
+    @include display-flex;
     margin: 5px 0 15px;
 
     .goal-tab-1 {
@@ -48,7 +54,7 @@
     }
   }
   .section-tab-box {
-    display: flex;
+    @include display-flex;
     margin-bottom: 10px;
 
     .section-tab {
@@ -64,38 +70,41 @@
     }
   }
   .save-button-box {
-    display: flex;
+    @include display-flex;
     flex-direction: row-reverse;
   }
   .scroll-box {
     overflow-y: auto;
-    flex: 1;
+    @include rest-space;
   }
   .section-1, .section-2, .section-3 {
     @include normal-font;
   }
   .question {
-    font-size: 22px;
-    .question-no {
-      font-weight: 400;
+    margin-top: 20px;
+  }
+  .question-no, .question-desc {
+    font-weight: 600;
+  }
+  .question-detail {
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .response-selector {
+    margin: 25px 0;
+  }
+  .footer {
+    @include display-flex;
+    justify-content: center;
+    button {
+      width: 200px;
     }
-    .question-desc {
-      font-weight: 200;
+    .first {
+      margin-right: 15px;
     }
   }
 
   @media only screen and (max-width: $mobileEnd) {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .content-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-
     .goal-tab-box {
       margin-left: -$padding;
       margin-right: -$padding;
@@ -110,10 +119,16 @@
     }
     .section-title-box {
       margin: 5px 0 7px;
-      font-size: 30px;
+      font-size: 25px;
       .section-no {
         display: none;
       }
+    }
+    .question-no, .question-desc {
+      font-size: 18px;
+    }
+    .question-detail {
+      font-size: 15px;
     }
   }
 
@@ -134,6 +149,15 @@
     .section-title-box {
       margin-bottom: 5px;
       font-size: 35px;
+    }
+    .response-selector {
+      margin: 40px 0 30px;
+    }
+    .question-no, .question-desc {
+      font-size: 30px;
+    }
+    .question-detail {
+      font-size: 22px;
     }
   }
 
